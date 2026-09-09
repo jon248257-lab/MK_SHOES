@@ -1,1955 +1,1822 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#11130f">
-
-<title>Contact — MK Shoes Center</title>
-
-<meta name="description"
-content="Contact MK Shoes Center in Kijura, Masindi. Visit our store, chat on WhatsApp, ask about available shoes, deliveries and installment purchases.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
-
-<style>
-
-:root{
-  --ink:#11130f;
-  --paper:#f5f1e8;
-  --cream:#e9e2d2;
-  --white:#fffdf8;
-  --green:#26372d;
-  --red:#a74631;
-  --gold:#b69355;
-  --muted:#6d6c64;
-  --line:rgba(17,19,15,.14);
-  --shadow:0 30px 80px rgba(17,19,15,.13);
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:"DM Sans",sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button,
-input,
-textarea{
-  font:inherit;
-}
-
-img{
-  display:block;
-  width:100%;
-}
-
-/* =========================
-   TOP BAR
-========================= */
-
-.topbar{
-  min-height:34px;
-  background:var(--ink);
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  padding:8px 20px;
-  font-size:10px;
-  letter-spacing:.16em;
-  text-transform:uppercase;
-}
-
-/* =========================
-   NAVIGATION
-========================= */
-
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(245,241,232,.94);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid var(--line);
-}
-
-.nav{
-  max-width:1440px;
-  min-height:82px;
-  margin:auto;
-  padding:0 5vw;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo{
-  font-size:20px;
-  font-weight:700;
-  letter-spacing:-.05em;
-  line-height:1;
-}
-
-.logo span{
-  display:block;
-  margin-top:5px;
-  font-size:8px;
-  letter-spacing:.28em;
-  color:var(--muted);
-  font-weight:500;
-}
-
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:34px;
-  font-size:13px;
-  font-weight:600;
-}
-
-.nav-links a{
-  position:relative;
-  padding:8px 0;
-}
-
-.nav-links a:after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:0;
-  width:0;
-  height:1px;
-  background:var(--ink);
-  transition:.3s;
-}
-
-.nav-links a:hover:after,
-.nav-links a.active:after{
-  width:100%;
-}
-
-.nav-action{
-  background:var(--ink);
-  color:#fff;
-  border-radius:100px;
-  padding:13px 20px;
-  font-size:12px;
-  font-weight:700;
-  transition:.3s;
-}
-
-.nav-action:hover{
-  transform:translateY(-2px);
-  background:var(--green);
-}
-
-.menu{
-  display:none;
-  border:0;
-  background:none;
-  font-size:25px;
-  cursor:pointer;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-  max-width:1440px;
-  margin:auto;
-  min-height:680px;
-  padding:90px 5vw;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:7vw;
-  align-items:center;
-}
-
-.eyebrow{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  font-size:11px;
-  font-weight:700;
-}
-
-.eyebrow:before{
-  content:"";
-  width:38px;
-  height:1px;
-  background:var(--red);
-}
-
-.hero h1{
-  margin-top:25px;
-  font-size:clamp(64px,9vw,140px);
-  line-height:.84;
-  letter-spacing:-.08em;
-  font-weight:600;
-}
-
-.hero h1 em{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-}
-
-.hero-intro{
-  max-width:550px;
-  margin-top:38px;
-  color:#5d5b55;
-  font-size:17px;
-  line-height:1.8;
-}
-
-.hero-buttons{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:32px;
-}
-
-.btn{
-  min-height:52px;
-  padding:0 23px;
-  border-radius:100px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:9px;
-  font-size:13px;
-  font-weight:700;
-  transition:.3s;
-}
-
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-.btn-dark{
-  background:var(--ink);
-  color:#fff;
-}
-
-.btn-red{
-  background:var(--red);
-  color:#fff;
-}
-
-.btn-outline{
-  border:1px solid var(--line);
-}
-
-/* HERO CARD */
-
-.hero-card{
-  position:relative;
-  min-height:500px;
-  border-radius:30px;
-  background:var(--green);
-  color:#fff;
-  padding:40px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  box-shadow:var(--shadow);
-}
-
-.hero-card:before{
-  content:"";
-  position:absolute;
-  width:360px;
-  height:360px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.15);
-  top:-120px;
-  right:-110px;
-}
-
-.hero-card:after{
-  content:"";
-  position:absolute;
-  width:240px;
-  height:240px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.1);
-  top:-60px;
-  right:-50px;
-}
-
-.hero-card-number{
-  position:absolute;
-  top:35px;
-  left:38px;
-  font-size:12px;
-  color:#d1b66f;
-  letter-spacing:.2em;
-}
-
-.hero-card-icon{
-  position:absolute;
-  top:35px;
-  right:38px;
-  width:52px;
-  height:52px;
-  border:1px solid rgba(255,255,255,.25);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  font-size:20px;
-}
-
-.hero-card h2{
-  position:relative;
-  z-index:2;
-  font-size:48px;
-  line-height:.95;
-  letter-spacing:-.055em;
-}
-
-.hero-card p{
-  position:relative;
-  z-index:2;
-  margin-top:20px;
-  max-width:390px;
-  color:#c6c5bd;
-  font-size:14px;
-  line-height:1.8;
-}
-
-/* =========================
-   MARQUEE
-========================= */
-
-.marquee{
-  background:var(--red);
-  color:#fff;
-  overflow:hidden;
-}
-
-.marquee-track{
-  width:max-content;
-  display:flex;
-  animation:move 25s linear infinite;
-}
-
-.marquee-item{
-  white-space:nowrap;
-  padding:20px 35px;
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  font-size:12px;
-}
-
-.marquee-item span{
-  color:#f2d493;
-  padding:0 18px;
-}
-
-@keyframes move{
-  to{
-    transform:translateX(-50%);
-  }
-}
-
-/* =========================
-   CONTACT GRID
-========================= */
-
-.contact-section{
-  max-width:1440px;
-  margin:auto;
-  padding:125px 5vw;
-}
-
-.section-heading{
-  max-width:800px;
-  margin-bottom:70px;
-}
-
-.section-heading small{
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  font-size:11px;
-  color:var(--red);
-  font-weight:700;
-}
-
-.section-heading h2{
-  margin-top:20px;
-  font-size:clamp(48px,6vw,88px);
-  line-height:.92;
-  letter-spacing:-.065em;
-}
-
-.section-heading h2 em{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:70px;
-  align-items:start;
-}
-
-/* =========================
-   CONTACT DETAILS
-========================= */
-
-.details{
-  border-top:1px solid var(--line);
-}
-
-.detail{
-  padding:30px 0;
-  border-bottom:1px solid var(--line);
-  display:grid;
-  grid-template-columns:120px 1fr;
-  gap:20px;
-}
-
-.detail-label{
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  color:var(--muted);
-  font-weight:700;
-}
-
-.detail-content{
-  font-size:17px;
-  line-height:1.6;
-}
-
-.detail-content strong{
-  font-size:20px;
-}
-
-.detail-content small{
-  display:block;
-  margin-top:7px;
-  color:var(--muted);
-  font-size:12px;
-}
-
-.whatsapp-link{
-  display:inline-flex;
-  margin-top:12px;
-  padding:11px 16px;
-  background:#168c55;
-  color:#fff;
-  border-radius:100px;
-  font-size:12px;
-  font-weight:700;
-}
-
-/* =========================
-   FORM
-========================= */
-
-.form-box{
-  background:var(--white);
-  border-radius:28px;
-  padding:45px;
-  box-shadow:0 20px 60px rgba(17,19,15,.07);
-}
-
-.form-box h3{
-  font-size:30px;
-  letter-spacing:-.04em;
-}
-
-.form-box > p{
-  margin-top:10px;
-  color:var(--muted);
-  font-size:13px;
-}
-
-.form{
-  margin-top:35px;
-}
-
-.form-row{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-.field{
-  margin-bottom:18px;
-}
-
-.field label{
-  display:block;
-  margin-bottom:8px;
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-  font-weight:700;
-  color:var(--muted);
-}
-
-.field input,
-.field textarea,
-.field select{
-  width:100%;
-  border:1px solid var(--line);
-  background:#faf8f2;
-  outline:none;
-  padding:15px 16px;
-  border-radius:12px;
-  color:var(--ink);
-  transition:.25s;
-}
-
-.field textarea{
-  min-height:150px;
-  resize:vertical;
-}
-
-.field input:focus,
-.field textarea:focus,
-.field select:focus{
-  border-color:var(--ink);
-  background:#fff;
-}
-
-.form-submit{
-  border:0;
-  cursor:pointer;
-  width:100%;
-}
-
-/* =========================
-   QUICK CONTACT
-========================= */
-
-.quick{
-  background:var(--ink);
-  color:#fff;
-  padding:100px 5vw;
-}
-
-.quick-inner{
-  max-width:1440px;
-  margin:auto;
-}
-
-.quick-heading{
-  display:flex;
-  justify-content:space-between;
-  gap:50px;
-  align-items:end;
-  margin-bottom:60px;
-}
-
-.quick-heading h2{
-  font-size:clamp(45px,6vw,80px);
-  line-height:.92;
-  letter-spacing:-.06em;
-}
-
-.quick-heading h2 em{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-}
-
-.quick-heading p{
-  max-width:400px;
-  color:#aaa9a2;
-  font-size:14px;
-  line-height:1.8;
-}
-
-.quick-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-}
-
-.quick-card{
-  min-height:280px;
-  border:1px solid rgba(255,255,255,.13);
-  border-radius:20px;
-  padding:30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  transition:.35s;
-}
-
-.quick-card:hover{
-  background:#fff;
-  color:var(--ink);
-  transform:translateY(-7px);
-}
-
-.quick-icon{
-  width:45px;
-  height:45px;
-  border:1px solid currentColor;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-}
-
-.quick-card h3{
-  font-size:27px;
-  line-height:1;
-  letter-spacing:-.04em;
-}
-
-.quick-card p{
-  margin-top:12px;
-  color:#aaa9a2;
-  font-size:13px;
-}
-
-.quick-card:hover p{
-  color:#66645d;
-}
-
-.quick-card a{
-  display:inline-block;
-  margin-top:18px;
-  font-size:12px;
-  font-weight:700;
-}
-
-/* =========================
-   MAP
-========================= */
-
-.map-section{
-  padding:120px 5vw;
-  background:var(--cream);
-}
-
-.map-inner{
-  max-width:1440px;
-  margin:auto;
-}
-
-.map-heading{
-  display:flex;
-  justify-content:space-between;
-  gap:40px;
-  align-items:end;
-  margin-bottom:45px;
-}
-
-.map-heading h2{
-  font-size:clamp(45px,6vw,80px);
-  line-height:.9;
-  letter-spacing:-.06em;
-}
-
-.map-heading h2 em{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-}
-
-.map-heading p{
-  max-width:390px;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.8;
-}
-
-.map-wrap{
-  position:relative;
-  overflow:hidden;
-  border-radius:28px;
-  height:520px;
-  background:#ddd;
-  box-shadow:var(--shadow);
-}
-
-.map-wrap iframe{
-  width:100%;
-  height:100%;
-  border:0;
-  filter:grayscale(.2);
-}
-
-.map-badge{
-  position:absolute;
-  left:25px;
-  bottom:25px;
-  background:var(--ink);
-  color:#fff;
-  padding:22px 25px;
-  border-radius:17px;
-  max-width:290px;
-  box-shadow:0 15px 40px rgba(0,0,0,.2);
-}
-
-.map-badge small{
-  display:block;
-  color:#d1b66f;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:9px;
-  margin-bottom:7px;
-}
-
-.map-badge strong{
-  font-size:17px;
-}
-
-.map-badge span{
-  display:block;
-  margin-top:5px;
-  color:#aaa9a2;
-  font-size:11px;
-}
-
-/* =========================
-   FAQ STRIP
-========================= */
-
-.faq{
-  max-width:1440px;
-  margin:auto;
-  padding:120px 5vw;
-}
-
-.faq-title{
-  font-size:clamp(45px,6vw,80px);
-  line-height:.9;
-  letter-spacing:-.06em;
-  margin-bottom:55px;
-}
-
-.faq-title em{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-}
-
-details{
-  border-top:1px solid var(--line);
-}
-
-details:last-child{
-  border-bottom:1px solid var(--line);
-}
-
-summary{
-  list-style:none;
-  cursor:pointer;
-  padding:28px 5px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  font-size:17px;
-  font-weight:600;
-}
-
-summary::-webkit-details-marker{
-  display:none;
-}
-
-summary:after{
-  content:"+";
-  font-size:24px;
-  font-weight:400;
-}
-
-details[open] summary:after{
-  content:"−";
-}
-
-details p{
-  max-width:750px;
-  padding:0 5px 30px;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.8;
-}
-
-/* =========================
-   CTA
-========================= */
-
-.cta{
-  background:var(--red);
-  color:#fff;
-  text-align:center;
-  padding:100px 5vw;
-}
-
-.cta-inner{
-  max-width:850px;
-  margin:auto;
-}
-
-.cta small{
-  text-transform:uppercase;
-  letter-spacing:.2em;
-  font-size:10px;
-}
-
-.cta h2{
-  margin-top:18px;
-  font-size:clamp(50px,7vw,100px);
-  line-height:.88;
-  letter-spacing:-.07em;
-}
-
-.cta h2 em{
-  font-family:"Playfair Display",serif;
-  font-weight:500;
-}
-
-.cta p{
-  max-width:500px;
-  margin:25px auto 0;
-  color:#f0d8d1;
-}
-
-.cta .btn{
-  margin-top:30px;
-  background:#fff;
-  color:var(--ink);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  background:var(--ink);
-  color:#fff;
-  padding:80px 5vw 30px;
-}
-
-.footer-inner{
-  max-width:1440px;
-  margin:auto;
-}
-
-.footer-top{
-  display:grid;
-  grid-template-columns:1.3fr .7fr .7fr .9fr;
-  gap:50px;
-  padding-bottom:70px;
-}
-
-.footer-brand h3{
-  font-size:28px;
-  letter-spacing:-.04em;
-}
-
-.footer-brand p{
-  max-width:370px;
-  margin-top:17px;
-  color:#9d9c95;
-  font-size:13px;
-  line-height:1.8;
-}
-
-.footer-column h4{
-  margin-bottom:20px;
-  color:#d2b46d;
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-size:10px;
-}
-
-.footer-column a{
-  display:block;
-  margin:10px 0;
-  color:#aaa9a2;
-  font-size:13px;
-}
-
-.footer-column a:hover{
-  color:#fff;
-}
-
-.footer-bottom{
-  border-top:1px solid rgba(255,255,255,.12);
-  padding-top:25px;
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:#85847e;
-  font-size:11px;
-}
-
-/* =========================
-   WHATSAPP
-========================= */
-
-.whatsapp{
-  position:fixed;
-  right:22px;
-  bottom:22px;
-  z-index:999;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  background:#168c55;
-  color:#fff;
-  display:grid;
-  place-items:center;
-  font-size:22px;
-  box-shadow:0 12px 35px rgba(0,0,0,.22);
-  transition:.3s;
-}
-
-.whatsapp:hover{
-  transform:scale(1.08);
-}
-
-/* =========================
-   REVEAL
-========================= */
-
-.reveal{
-  opacity:0;
-  transform:translateY(28px);
-  transition:.8s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:none;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:950px){
-
-  .nav-links,
-  .nav-action{
-    display:none;
-  }
-
-  .menu{
-    display:block;
-  }
-
-  .hero{
-    grid-template-columns:1fr;
-    padding-top:60px;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .quick-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .footer-top{
-    grid-template-columns:1fr 1fr;
-  }
-}
-
-@media(max-width:650px){
-
-  .hero{
-    padding:55px 6vw 80px;
-  }
-
-  .hero h1{
-    font-size:64px;
-  }
-
-  .hero-card{
-    min-height:410px;
-    padding:30px;
-  }
-
-  .hero-card h2{
-    font-size:40px;
-  }
-
-  .contact-section,
-  .faq{
-    padding:90px 6vw;
-  }
-
-  .form-box{
-    padding:28px 22px;
-  }
-
-  .form-row{
-    grid-template-columns:1fr;
-  }
-
-  .detail{
-    grid-template-columns:1fr;
-    gap:7px;
-  }
-
-  .quick{
-    padding:80px 6vw;
-  }
-
-  .quick-heading,
-  .map-heading{
-    display:block;
-  }
-
-  .quick-heading p,
-  .map-heading p{
-    margin-top:25px;
-  }
-
-  .quick-grid{
-    grid-template-columns:1fr;
-  }
-
-  .map-section{
-    padding:80px 6vw;
-  }
-
-  .map-wrap{
-    height:450px;
-  }
-
-  .footer-top{
-    grid-template-columns:1fr;
-  }
-
-  .footer-bottom{
-    flex-direction:column;
-  }
-
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | MK Shoes Center</title>
+
+  <meta name="description"
+        content="Contact MK Shoes Center in Kijura, Masindi. Chat with us on WhatsApp, visit our store or enquire about footwear and delivery across Uganda.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    :root{
+      --black:#11110f;
+      --deep:#171714;
+      --cream:#f3eee4;
+      --paper:#faf9f5;
+      --white:#fff;
+      --gold:#b79a62;
+      --muted:#77736a;
+      --line:rgba(17,17,15,.13);
+      --shadow:0 25px 70px rgba(0,0,0,.13);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:var(--paper);
+      color:var(--black);
+      font-family:"DM Sans",sans-serif;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    /* =====================================================
+       TOP BAR
+       ===================================================== */
+
+    .top-bar{
+      background:var(--black);
+      color:#fff;
+      text-align:center;
+      padding:10px 20px;
+      font-size:11px;
+      letter-spacing:.13em;
+      text-transform:uppercase;
+    }
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    header{
+      position:absolute;
+      top:40px;
+      left:0;
+      width:100%;
+      z-index:50;
+      padding:0 5%;
+    }
+
+    .nav{
+      max-width:1400px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+      padding:18px 24px;
+
+      color:#fff;
+      background:rgba(12,12,10,.34);
+      border:1px solid rgba(255,255,255,.25);
+
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+    }
+
+    .logo{
+      font-size:19px;
+      font-weight:700;
+      letter-spacing:.08em;
+      white-space:nowrap;
+    }
+
+    .logo span{
+      color:#d2b87f;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:30px;
+    }
+
+    .nav-links a{
+      position:relative;
+      font-size:14px;
+      font-weight:600;
+      padding:5px 0;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:0;
+      height:1px;
+      background:#fff;
+      transition:.3s;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after{
+      width:100%;
+    }
+
+    .nav-whatsapp{
+      background:#fff;
+      color:#111;
+      padding:11px 18px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      transition:.3s;
+      white-space:nowrap;
+    }
+
+    .nav-whatsapp:hover{
+      transform:translateY(-2px);
+    }
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .contact-hero{
+      min-height:720px;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      color:#fff;
+      overflow:hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.82),
+          rgba(0,0,0,.48),
+          rgba(0,0,0,.18)
+        ),
+        url("https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=2200&q=85");
+
+      background-size:cover;
+      background-position:center;
+    }
+
+    .contact-hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(0,0,0,.05),
+          transparent 45%,
+          rgba(0,0,0,.55)
+        );
+    }
+
+    .hero-content{
+      width:90%;
+      max-width:1350px;
+      margin:0 auto;
+      padding:0 0 90px;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+
+      margin-bottom:22px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:38px;
+      height:1px;
+      background:#fff;
+    }
+
+    .hero-content h1{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(75px,11vw,155px);
+      font-weight:500;
+      line-height:.82;
+      letter-spacing:-.065em;
+      max-width:950px;
+    }
+
+    .hero-bottom{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:40px;
+      margin-top:45px;
+    }
+
+    .hero-bottom p{
+      max-width:470px;
+      color:rgba(255,255,255,.78);
+      font-size:17px;
+    }
+
+    .hero-scroll{
+      font-size:11px;
+      letter-spacing:.15em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.65);
+    }
+
+    /* =====================================================
+       CONTACT INTRO
+       ===================================================== */
+
+    .contact-intro{
+      padding:120px 0;
+      background:var(--paper);
+    }
+
+    .wrap{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+    }
+
+    .intro-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:100px;
+      align-items:start;
+    }
+
+    .kicker{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted);
+      font-weight:700;
+      margin-bottom:22px;
+    }
+
+    .intro-grid h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(48px,6vw,82px);
+      line-height:.94;
+      letter-spacing:-.05em;
+      font-weight:500;
+    }
+
+    .intro-copy{
+      padding-top:35px;
+    }
+
+    .intro-copy p{
+      font-size:18px;
+      color:#625e55;
+      max-width:560px;
+    }
+
+    /* =====================================================
+       CONTACT OPTIONS
+       ===================================================== */
+
+    .contact-options{
+      padding:0 0 120px;
+      background:var(--paper);
+    }
+
+    .options-grid{
+      display:grid;
+      grid-template-columns:1.35fr .65fr;
+      gap:15px;
+    }
+
+    .whatsapp-panel{
+      min-height:450px;
+      padding:55px;
+      background:var(--black);
+      color:#fff;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+
+      position:relative;
+      overflow:hidden;
+    }
+
+    .whatsapp-panel::before{
+      content:"";
+      position:absolute;
+      width:360px;
+      height:360px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:50%;
+      right:-120px;
+      bottom:-120px;
+    }
+
+    .whatsapp-panel::after{
+      content:"";
+      position:absolute;
+      width:210px;
+      height:210px;
+      border:1px solid rgba(255,255,255,.09);
+      border-radius:50%;
+      right:-45px;
+      bottom:-45px;
+    }
+
+    .panel-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .panel-number{
+      font-family:"Playfair Display",serif;
+      font-size:22px;
+      color:#c5a96f;
+      margin-bottom:40px;
+    }
+
+    .whatsapp-panel h3{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(45px,5vw,72px);
+      font-weight:500;
+      line-height:.92;
+      letter-spacing:-.045em;
+      max-width:650px;
+    }
+
+    .whatsapp-panel p{
+      color:#aaa69c;
+      max-width:500px;
+      margin-top:25px;
+    }
+
+    .whatsapp-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:max-content;
+
+      background:#fff;
+      color:#111;
+
+      padding:15px 23px;
+      border-radius:999px;
+
+      font-weight:700;
+      font-size:14px;
+
+      margin-top:35px;
+
+      transition:.3s;
+    }
+
+    .whatsapp-button:hover{
+      transform:translateY(-3px);
+    }
+
+    .direct-panel{
+      background:var(--cream);
+      padding:45px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+
+      min-height:450px;
+    }
+
+    .direct-panel h3{
+      font-family:"Playfair Display",serif;
+      font-size:45px;
+      line-height:.95;
+      font-weight:500;
+      letter-spacing:-.04em;
+    }
+
+    .direct-details{
+      border-top:1px solid var(--line);
+      margin-top:40px;
+    }
+
+    .detail{
+      padding:18px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .detail strong{
+      display:block;
+      font-size:10px;
+      text-transform:uppercase;
+      letter-spacing:.15em;
+      margin-bottom:4px;
+    }
+
+    .detail span,
+    .detail a{
+      font-size:14px;
+      color:#67635b;
+    }
+
+    .detail a:hover{
+      color:#111;
+    }
+
+    /* =====================================================
+       VISUAL CONTACT MOMENT
+       ===================================================== */
+
+    .visual-contact{
+      padding:0 0 120px;
+      background:var(--paper);
+    }
+
+    .visual-grid{
+      display:grid;
+      grid-template-columns:.7fr 1.3fr;
+      min-height:520px;
+    }
+
+    .visual-caption{
+      background:#d6c3a0;
+      padding:55px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .visual-caption h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(45px,5vw,72px);
+      font-weight:500;
+      line-height:.92;
+      letter-spacing:-.05em;
+    }
+
+    .visual-caption p{
+      max-width:350px;
+      color:#4f4a41;
+      font-size:14px;
+    }
+
+    .visual-image{
+      overflow:hidden;
+    }
+
+    .visual-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:transform .8s ease;
+    }
+
+    .visual-image:hover img{
+      transform:scale(1.04);
+    }
+
+    /* =====================================================
+       MESSAGE / ENQUIRY
+       ===================================================== */
+
+    .message-section{
+      padding:120px 0;
+      background:var(--deep);
+      color:#fff;
+    }
+
+    .message-grid{
+      display:grid;
+      grid-template-columns:.8fr 1.2fr;
+      gap:90px;
+    }
+
+    .message-title h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(50px,6vw,85px);
+      line-height:.9;
+      font-weight:500;
+      letter-spacing:-.055em;
+    }
+
+    .message-title p{
+      color:#99958c;
+      max-width:360px;
+      margin-top:25px;
+    }
+
+    .message-form{
+      display:grid;
+      gap:18px;
+    }
+
+    .field{
+      position:relative;
+    }
+
+    .field input,
+    .field textarea,
+    .field select{
+      width:100%;
+      border:0;
+      border-bottom:1px solid rgba(255,255,255,.2);
+      background:transparent;
+      color:#fff;
+
+      padding:16px 0;
+
+      outline:none;
+      font:inherit;
+      font-size:15px;
+    }
+
+    .field textarea{
+      min-height:130px;
+      resize:vertical;
+    }
+
+    .field select{
+      color:#aaa69d;
+    }
+
+    .field select option{
+      color:#111;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder{
+      color:#77746c;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus{
+      border-color:#d0b477;
+    }
+
+    .send-button{
+      width:max-content;
+      border:0;
+      background:#fff;
+      color:#111;
+      padding:15px 25px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      margin-top:12px;
+      transition:.3s;
+    }
+
+    .send-button:hover{
+      transform:translateY(-3px);
+    }
+
+    .form-note{
+      color:#69665f;
+      font-size:11px;
+      margin-top:4px;
+    }
+
+    /* =====================================================
+       LOCATION
+       ===================================================== */
+
+    .location{
+      padding:120px 0;
+      background:var(--cream);
+    }
+
+    .location-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:40px;
+      margin-bottom:55px;
+    }
+
+    .location-header h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(55px,7vw,95px);
+      line-height:.88;
+      font-weight:500;
+      letter-spacing:-.06em;
+    }
+
+    .location-header p{
+      max-width:430px;
+      color:var(--muted);
+    }
+
+    .location-grid{
+      display:grid;
+      grid-template-columns:.75fr 1.25fr;
+      gap:15px;
+    }
+
+    .location-info{
+      background:#fff;
+      padding:45px;
+    }
+
+    .location-info h3{
+      font-family:"Playfair Display",serif;
+      font-size:42px;
+      font-weight:500;
+      line-height:1;
+      margin-bottom:35px;
+    }
+
+    .location-list{
+      border-top:1px solid var(--line);
+    }
+
+    .location-item{
+      padding:17px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .location-item strong{
+      display:block;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-size:10px;
+      margin-bottom:5px;
+    }
+
+    .location-item span{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .map-link{
+      display:inline-block;
+      margin-top:30px;
+      font-size:13px;
+      font-weight:700;
+      border-bottom:1px solid #111;
+      padding-bottom:5px;
+    }
+
+    .map{
+      min-height:500px;
+      overflow:hidden;
+      background:#ddd;
+      box-shadow:var(--shadow);
+    }
+
+    .map iframe{
+      width:100%;
+      height:100%;
+      min-height:500px;
+      border:0;
+    }
+
+    /* =====================================================
+       FINAL CTA
+       ===================================================== */
+
+    .final{
+      background:#11110f;
+      color:#fff;
+      padding:120px 0;
+      text-align:center;
+    }
+
+    .final .kicker{
+      color:#8f8b82;
+    }
+
+    .final h2{
+      font-family:"Playfair Display",serif;
+      font-size:clamp(60px,9vw,125px);
+      line-height:.82;
+      font-weight:500;
+      letter-spacing:-.07em;
+      margin-bottom:35px;
+    }
+
+    .final p{
+      max-width:520px;
+      margin:0 auto 30px;
+      color:#9a968d;
+    }
+
+    .final-buttons{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .final-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 25px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:700;
+      transition:.3s;
+    }
+
+    .final-button.light{
+      background:#fff;
+      color:#111;
+    }
+
+    .final-button.outline{
+      border:1px solid rgba(255,255,255,.3);
+      color:#fff;
+    }
+
+    .final-button:hover{
+      transform:translateY(-3px);
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer{
+      background:#0c0c0a;
+      color:#fff;
+      padding:70px 0 28px;
+    }
+
+    .footer-grid{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:1.3fr .7fr .9fr .9fr;
+      gap:50px;
+
+      padding-bottom:55px;
+    }
+
+    .footer-brand h3{
+      font-size:20px;
+      letter-spacing:.08em;
+      margin-bottom:15px;
+    }
+
+    .footer-brand h3 span{
+      color:#c2a46c;
+    }
+
+    .footer-brand p{
+      max-width:330px;
+      color:#77746c;
+      font-size:14px;
+    }
+
+    .footer-column h4{
+      color:#9b978e;
+      font-size:10px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-bottom:20px;
+    }
+
+    .footer-column a,
+    .footer-column p{
+      display:block;
+      color:#d4d0c7;
+      font-size:13px;
+      margin-bottom:9px;
+    }
+
+    .footer-column a:hover{
+      color:#c8ab70;
+    }
+
+    .footer-bottom{
+      width:90%;
+      max-width:1300px;
+      margin:auto;
+
+      border-top:1px solid rgba(255,255,255,.1);
+      padding-top:25px;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:20px;
+
+      color:#706d66;
+      font-size:11px;
+      text-align:left;
+    }
+
+    .footer-credit{
+      text-align:left;
+    }
+
+    /* =====================================================
+       FLOATING WHATSAPP
+       ===================================================== */
+
+    .floating-whatsapp{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:100;
+
+      background:#fff;
+      color:#111;
+
+      padding:13px 18px;
+      border-radius:999px;
+
+      font-size:12px;
+      font-weight:700;
+
+      box-shadow:0 15px 45px rgba(0,0,0,.18);
+
+      transition:.3s;
+    }
+
+    .floating-whatsapp:hover{
+      transform:translateY(-3px);
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+
+    @media(max-width:1050px){
+
+      .intro-grid,
+      .message-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+      }
+
+      .options-grid{
+        grid-template-columns:1fr;
+      }
+
+      .visual-grid{
+        grid-template-columns:1fr;
+      }
+
+      .visual-caption{
+        min-height:350px;
+      }
+
+      .location-grid{
+        grid-template-columns:1fr;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+    }
+
+    @media(max-width:760px){
+
+      .top-bar{
+        font-size:9px;
+      }
+
+      header{
+        top:38px;
+        padding:0 15px;
+      }
+
+      .nav{
+        padding:12px 14px;
+      }
+
+      .logo{
+        font-size:13px;
+      }
+
+      .nav-links{
+        gap:12px;
+      }
+
+      .nav-links a{
+        font-size:10px;
+      }
+
+      .nav-whatsapp{
+        display:none;
+      }
+
+      .contact-hero{
+        min-height:680px;
+      }
+
+      .hero-content{
+        padding-bottom:65px;
+      }
+
+      .hero-content h1{
+        font-size:72px;
+      }
+
+      .hero-bottom{
+        display:block;
+      }
+
+      .hero-bottom p{
+        font-size:15px;
+      }
+
+      .hero-scroll{
+        margin-top:25px;
+      }
+
+      .contact-intro,
+      .message-section,
+      .location{
+        padding:90px 0;
+      }
+
+      .contact-options,
+      .visual-contact{
+        padding-bottom:90px;
+      }
+
+      .intro-copy{
+        padding-top:0;
+      }
+
+      .whatsapp-panel,
+      .direct-panel{
+        padding:35px;
+        min-height:400px;
+      }
+
+      .visual-caption{
+        padding:40px 30px;
+      }
+
+      .message-grid{
+        gap:50px;
+      }
+
+      .location-header{
+        display:block;
+      }
+
+      .location-header p{
+        margin-top:25px;
+      }
+
+      .location-info{
+        padding:35px;
+      }
+
+      .map,
+      .map iframe{
+        min-height:380px;
+      }
+
+      .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+      }
+
+      .footer-bottom{
+        display:block;
+      }
+
+      .footer-bottom > div:last-child{
+        margin-top:12px;
+      }
+
+      .floating-whatsapp{
+        right:12px;
+        bottom:12px;
+        font-size:11px;
+        padding:11px 15px;
+      }
+
+    }
+
+  </style>
 </head>
+
 
 <body>
 
-<!-- PROMOTION -->
-<div class="topbar">
-20% OFF SELECTED STYLES • CHAT WITH MK FOR CURRENT AVAILABILITY
-</div>
 
-<!-- NAVIGATION -->
-<header>
+  <!-- =====================================================
+       TOP BAR
+       ===================================================== -->
 
-<nav class="nav">
+  <div class="top-bar">
+    Nationwide delivery across Uganda • Installment payment available • 20% promotion
+  </div>
 
-<a href="index.html" class="logo">
-MK SHOES
-<span>CENTER · KIJURA</span>
-</a>
 
-<div class="nav-links">
+  <!-- =====================================================
+       NAVIGATION
+       ===================================================== -->
 
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="about.html">About</a>
-<a href="contact.html" class="active">Contact</a>
+  <header>
 
-</div>
+    <nav class="nav">
 
-<a
-href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%27d%20like%20to%20ask%20about%20your%20shoes."
-target="_blank"
-class="nav-action">
-Chat with MK ↗
-</a>
+      <a href="index.html" class="logo">
+        MK <span>SHOES</span> CENTER
+      </a>
 
-<button class="menu" onclick="toggleMenu()" aria-label="Open menu">
-☰
-</button>
+      <div class="nav-links">
 
-</nav>
+        <a href="index.html">Home</a>
 
-</header>
+        <a href="shop.html">Shop</a>
 
-<!-- MOBILE MENU -->
+        <a href="about.html">About</a>
 
-<div id="mobileMenu"
-style="
-display:none;
-position:fixed;
-top:70px;
-left:0;
-right:0;
-z-index:999;
-background:#f5f1e8;
-padding:25px;
-border-bottom:1px solid rgba(17,19,15,.14);
-">
+        <a href="contact.html" class="active">Contact</a>
 
-<a href="index.html"
-style="display:block;padding:15px 0;border-bottom:1px solid #ddd;">
-Home
-</a>
+      </div>
 
-<a href="shop.html"
-style="display:block;padding:15px 0;border-bottom:1px solid #ddd;">
-Shop
-</a>
+      <a
+        href="https://wa.me/256779818662"
+        class="nav-whatsapp"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
 
-<a href="about.html"
-style="display:block;padding:15px 0;border-bottom:1px solid #ddd;">
-About
-</a>
+    </nav>
 
-<a href="contact.html"
-style="display:block;padding:15px 0;font-weight:700;">
-Contact
-</a>
+  </header>
 
-</div>
 
+  <!-- =====================================================
+       HERO
+       ===================================================== -->
 
-<main>
+  <section class="contact-hero">
 
-<!-- HERO -->
+    <div class="hero-content">
 
-<section class="hero">
+      <div class="eyebrow">
+        MK Shoes Center • Let's talk
+      </div>
 
-<div class="reveal">
+      <h1>
+        Let's<br>
+        connect.
+      </h1>
 
-<div class="eyebrow">
-Let's talk
-</div>
+      <div class="hero-bottom">
 
-<h1>
-Come<br>
-say <em>hello.</em>
-</h1>
+        <p>
+          Looking for a particular pair, need help choosing,
+          want to ask about delivery or simply want to know
+          what's available? We're ready to hear from you.
+        </p>
 
-<p class="hero-intro">
-Looking for a particular pair? Want to know what is available?
-Need delivery information or help choosing a style?
-The MK team is ready to help.
-</p>
+        <div class="hero-scroll">
+          Scroll to explore ↓
+        </div>
 
-<div class="hero-buttons">
+      </div>
 
-<a
-href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%27m%20looking%20for%20a%20pair%20of%20shoes."
-target="_blank"
-class="btn btn-dark">
-WhatsApp MK →
-</a>
+    </div>
 
-<a href="#location" class="btn btn-outline">
-Find the store
-</a>
+  </section>
 
-</div>
 
-</div>
+  <!-- =====================================================
+       INTRO
+       ===================================================== -->
 
+  <section class="contact-intro">
 
-<div class="hero-card reveal">
+    <div class="wrap">
 
-<div class="hero-card-number">
-MK / 05
-</div>
+      <div class="intro-grid">
 
-<div class="hero-card-icon">
-↗
-</div>
+        <div>
 
-<h2>
-Real people.<br>
-Real answers.
-</h2>
+          <div class="kicker">
+            Contact MK
+          </div>
 
-<p>
-The catalogue is only part of what MK Shoes Center offers.
-If you don't see what you're searching for, ask the team.
-</p>
+          <h2>
+            A real person<br>
+            is one message away.
+          </h2>
 
-</div>
+        </div>
 
-</section>
+        <div class="intro-copy">
 
+          <p>
+            We believe shopping for shoes shouldn't feel complicated.
+            That's why you can reach the MK Shoes Center team directly.
+          </p>
 
-<!-- MARQUEE -->
+          <br>
 
-<div class="marquee">
+          <p>
+            WhatsApp is the quickest way to ask about a product,
+            request another style, discuss an order or get help
+            finding something that isn't currently displayed
+            in our catalogue.
+          </p>
 
-<div class="marquee-track">
+        </div>
 
-<div class="marquee-item">
-VISIT US <span>✦</span>
-CHAT WITH US <span>✦</span>
-DELIVERIES ACROSS UGANDA <span>✦</span>
-INSTALLMENTS AVAILABLE <span>✦</span>
-</div>
+      </div>
 
-<div class="marquee-item">
-VISIT US <span>✦</span>
-CHAT WITH US <span>✦</span>
-DELIVERIES ACROSS UGANDA <span>✦</span>
-INSTALLMENTS AVAILABLE <span>✦</span>
-</div>
+    </div>
 
-</div>
+  </section>
 
-</div>
 
+  <!-- =====================================================
+       CONTACT OPTIONS
+       ===================================================== -->
 
-<!-- CONTACT -->
+  <section class="contact-options">
 
-<section class="contact-section">
+    <div class="wrap">
 
-<div class="section-heading reveal">
+      <div class="options-grid">
 
-<small>01 / Get in touch</small>
 
-<h2>
-However you want to
-<em>reach us.</em>
-</h2>
+        <!-- WHATSAPP -->
 
-</div>
+        <div class="whatsapp-panel">
 
+          <div class="panel-content">
 
-<div class="contact-grid">
+            <div class="panel-number">
+              01
+            </div>
 
+            <h3>
+              Your pair<br>
+              starts with<br>
+              a conversation.
+            </h3>
 
-<!-- DETAILS -->
+            <p>
+              Send us a message and tell us what you're looking for.
+              You can also send a screenshot or photo of a shoe
+              you'd like us to help you find.
+            </p>
 
-<div class="details reveal">
+            <a
+              href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+              class="whatsapp-button"
+              target="_blank"
+              rel="noopener"
+            >
+              Start WhatsApp chat →
+            </a>
 
-<div class="detail">
+          </div>
 
-<div class="detail-label">
-Visit
-</div>
+        </div>
 
-<div class="detail-content">
 
-<strong>MK Shoes Center</strong>
+        <!-- DIRECT DETAILS -->
 
-<small>
-Kijura, Masindi, Uganda
-</small>
+        <div class="direct-panel">
 
-<small>
-Near Kisalabwire & Round About Academy
-</small>
+          <div>
 
-</div>
+            <div class="kicker">
+              Direct contact
+            </div>
 
-</div>
+            <h3>
+              Reach<br>
+              MK directly.
+            </h3>
 
+          </div>
 
-<div class="detail">
 
-<div class="detail-label">
-Opening
-</div>
+          <div class="direct-details">
 
-<div class="detail-content">
+            <div class="detail">
 
-<strong>9:00 AM — 9:00 PM</strong>
+              <strong>WhatsApp</strong>
 
-<small>
-Monday — Sunday
-</small>
+              <a
+                href="https://wa.me/256779818662"
+                target="_blank"
+                rel="noopener"
+              >
+                0779 818 662
+              </a>
 
-</div>
+            </div>
 
-</div>
 
+            <div class="detail">
 
-<div class="detail">
+              <strong>Location</strong>
 
-<div class="detail-label">
-WhatsApp
-</div>
+              <span>
+                Kijura, Masindi, Uganda
+              </span>
 
-<div class="detail-content">
+            </div>
 
-<strong>0779 818 662</strong>
 
-<small>
-Fastest way to ask about products and availability.
-</small>
+            <div class="detail">
 
-<a
-href="https://wa.me/256779818662"
-target="_blank"
-class="whatsapp-link">
-Start WhatsApp chat ↗
-</a>
+              <strong>Opening hours</strong>
 
-</div>
+              <span>
+                Monday – Sunday<br>
+                9:00 AM – 9:00 PM
+              </span>
 
-</div>
+            </div>
 
+          </div>
 
-<div class="detail">
+        </div>
 
-<div class="detail-label">
-Delivery
-</div>
+      </div>
 
-<div class="detail-content">
+    </div>
 
-<strong>Across Uganda</strong>
+  </section>
 
-<small>
-Ask the MK team about delivery options for your location.
-</small>
 
-</div>
+  <!-- =====================================================
+       VISUAL SECTION
+       ===================================================== -->
 
-</div>
+  <section class="visual-contact">
 
+    <div class="wrap">
 
-<div class="detail">
+      <div class="visual-grid">
 
-<div class="detail-label">
-Payments
-</div>
+        <div class="visual-caption">
 
-<div class="detail-content">
+          <div>
 
-<strong>Installments available</strong>
+            <div class="kicker">
+              Don't see it?
+            </div>
 
-<small>
-Contact MK for the current installment arrangement.
-</small>
+            <h2>
+              Ask<br>
+              anyway.
+            </h2>
 
-</div>
+          </div>
 
-</div>
+          <p>
+            Our online catalogue is only a selection.
+            If the style you're looking for isn't displayed,
+            speak to the MK Team.
+          </p>
 
-</div>
+        </div>
 
 
-<!-- FORM -->
+        <div class="visual-image">
 
-<div class="form-box reveal">
+          <img
+            src="https://images.unsplash.com/photo-1603035945286-e2570c150971?auto=format&fit=crop&w=1600&q=85"
+            alt="Assorted shoes displayed in a footwear store"
+            loading="lazy"
+          >
 
-<h3>
-Tell us what you need.
-</h3>
+        </div>
 
-<p>
-Send a message and we'll help you continue the conversation on WhatsApp.
-</p>
+      </div>
 
-<form
-class="form"
-onsubmit="sendWhatsApp(event)">
+    </div>
 
-<div class="form-row">
+  </section>
 
-<div class="field">
 
-<label for="name">
-Your name
-</label>
+  <!-- =====================================================
+       MESSAGE / ENQUIRY
+       ===================================================== -->
 
-<input
-id="name"
-type="text"
-placeholder="Your name"
-required>
+  <section class="message-section">
 
-</div>
+    <div class="wrap">
 
+      <div class="message-grid">
 
-<div class="field">
 
-<label for="phone">
-Phone
-</label>
+        <div class="message-title">
 
-<input
-id="phone"
-type="tel"
-placeholder="Your phone number">
+          <div class="kicker" style="color:#77736b;">
+            Quick enquiry
+          </div>
 
-</div>
+          <h2>
+            Tell us<br>
+            what you need.
+          </h2>
 
-</div>
+          <p>
+            This form opens WhatsApp with your message already
+            prepared. No complicated account or registration.
+          </p>
 
+        </div>
 
-<div class="field">
 
-<label for="interest">
-What are you looking for?
-</label>
+        <form
+          class="message-form"
+          id="whatsappForm"
+        >
 
-<select id="interest">
+          <div class="field">
 
-<option>General enquiry</option>
-<option>Sneakers</option>
-<option>Men's shoes</option>
-<option>Women's shoes</option>
-<option>Sandals</option>
-<option>Heels</option>
-<option>Kids' shoes</option>
-<option>Something not in the catalogue</option>
-<option>Delivery information</option>
-<option>Installment purchase</option>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your name"
+              required
+            >
 
-</select>
+          </div>
 
-</div>
 
+          <div class="field">
 
-<div class="field">
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Your phone number"
+            >
 
-<label for="message">
-Message
-</label>
+          </div>
 
-<textarea
-id="message"
-placeholder="Tell us the kind of shoe or style you're looking for..."
-required></textarea>
 
-</div>
+          <div class="field">
 
+            <select id="interest">
 
-<button
-type="submit"
-class="btn btn-dark form-submit">
-Send via WhatsApp →
-</button>
+              <option value="">
+                What are you enquiring about?
+              </option>
 
-</form>
+              <option>
+                Men's footwear
+              </option>
 
-</div>
+              <option>
+                Women's footwear
+              </option>
 
-</div>
+              <option>
+                Children's footwear
+              </option>
 
-</section>
+              <option>
+                Casual footwear
+              </option>
 
+              <option>
+                Formal footwear
+              </option>
 
-<!-- QUICK OPTIONS -->
+              <option>
+                Delivery
+              </option>
 
-<section class="quick">
+              <option>
+                Installment purchase
+              </option>
 
-<div class="quick-inner">
+              <option>
+                Other
+              </option>
 
-<div class="quick-heading reveal">
+            </select>
 
-<h2>
-Choose your
-<em>shortcut.</em>
-</h2>
+          </div>
 
-<p>
-Sometimes you don't need a form. Choose what you need and go directly
-to the right place.
-</p>
 
-</div>
+          <div class="field">
 
+            <textarea
+              id="message"
+              placeholder="Tell the MK Team what you're looking for..."
+              required
+            ></textarea>
 
-<div class="quick-grid">
+          </div>
 
 
-<article class="quick-card reveal">
+          <button
+            type="submit"
+            class="send-button"
+          >
+            Send via WhatsApp →
+          </button>
 
-<div class="quick-icon">
-↗
-</div>
+          <div class="form-note">
+            Your message will open directly in WhatsApp.
+          </div>
 
-<div>
+        </form>
 
-<h3>
-Browse the<br>
-catalogue.
-</h3>
+      </div>
 
-<p>
-See the shoes currently displayed online.
-</p>
+    </div>
 
-<a href="shop.html">
-OPEN SHOP →
-</a>
+  </section>
 
-</div>
 
-</article>
+  <!-- =====================================================
+       LOCATION
+       ===================================================== -->
 
+  <section class="location">
 
-<article class="quick-card reveal">
+    <div class="wrap">
 
-<div class="quick-icon">
-◉
-</div>
+      <div class="location-header">
 
-<div>
+        <div>
 
-<h3>
-Chat with<br>
-the team.
-</h3>
+          <div class="kicker">
+            Come through
+          </div>
 
-<p>
-Ask about sizes, styles and availability.
-</p>
+          <h2>
+            Find<br>
+            MK.
+          </h2>
 
-<a
-href="https://wa.me/256779818662"
-target="_blank">
-OPEN WHATSAPP →
-</a>
+        </div>
 
-</div>
+        <p>
+          Visit us in Kijura, Masindi. We're near Kisalabwire
+          Round About and Round About Academy.
+        </p>
 
-</article>
+      </div>
 
 
-<article class="quick-card reveal">
+      <div class="location-grid">
 
-<div class="quick-icon">
-⌖
-</div>
 
-<div>
+        <div class="location-info">
 
-<h3>
-Visit us<br>
-in Kijura.
-</h3>
+          <h3>
+            MK Shoes<br>
+            Center
+          </h3>
 
-<p>
-Find MK Shoes Center on the map below.
-</p>
 
-<a href="#location">
-VIEW LOCATION →
-</a>
+          <div class="location-list">
 
-</div>
+            <div class="location-item">
 
-</article>
+              <strong>Address</strong>
 
+              <span>
+                Kijura, Masindi, Uganda
+              </span>
 
-</div>
+            </div>
 
-</div>
 
-</section>
+            <div class="location-item">
 
+              <strong>Nearby</strong>
 
-<!-- MAP -->
+              <span>
+                Kisalabwire Round About<br>
+                Round About Academy
+              </span>
 
-<section class="map-section" id="location">
+            </div>
 
-<div class="map-inner">
 
-<div class="map-heading reveal">
+            <div class="location-item">
 
-<h2>
-Find us
-<em>in Kijura.</em>
-</h2>
+              <strong>Hours</strong>
 
-<p>
-MK Shoes Center is located in Kijura, Masindi, near Kisalabwire and
-Round About Academy.
-</p>
+              <span>
+                Monday – Sunday<br>
+                9:00 AM – 9:00 PM
+              </span>
 
-</div>
+            </div>
 
 
-<div class="map-wrap reveal">
+            <div class="location-item">
 
-<iframe
-src="https://www.google.com/maps?q=Kijura%2C%20Masindi%2C%20Uganda&output=embed"
-loading="lazy"
-allowfullscreen
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+              <strong>Delivery</strong>
 
+              <span>
+                Nationwide across Uganda
+              </span>
 
-<div class="map-badge">
+            </div>
 
-<small>
-MK Shoes Center
-</small>
 
-<strong>
-Kijura, Masindi
-</strong>
+            <div class="location-item">
 
-<span>
-Near Kisalabwire & Round About Academy
-</span>
+              <strong>Payments</strong>
 
-</div>
+              <span>
+                Installment purchases available
+              </span>
 
-</div>
+            </div>
 
-</div>
+          </div>
 
-</section>
 
+          <a
+            href="https://share.google/LUeJ3gWexT33tiiEK"
+            class="map-link"
+            target="_blank"
+            rel="noopener"
+          >
+            Open Google Maps →
+          </a>
 
-<!-- FAQ -->
+        </div>
 
-<section class="faq">
 
-<h2 class="faq-title reveal">
-A few quick
-<em>answers.</em>
-</h2>
+        <div class="map">
 
+          <iframe
+            src="https://www.google.com/maps?q=Kijura%2C%20Masindi%2C%20Uganda&output=embed"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            title="MK Shoes Center location">
+          </iframe>
 
-<details class="reveal">
+        </div>
 
-<summary>
-Can I ask for a shoe that isn't shown in the catalogue?
-</summary>
+      </div>
 
-<p>
-Yes. The online catalogue is only a selection. If you cannot find the
-style you're looking for, contact the MK team on WhatsApp and tell us
-what you need.
-</p>
+    </div>
 
-</details>
+  </section>
 
 
-<details class="reveal">
+  <!-- =====================================================
+       FINAL CTA
+       ===================================================== -->
 
-<summary>
-Do you deliver outside Masindi?
-</summary>
+  <section class="final">
 
-<p>
-Yes. MK Shoes Center offers deliveries across Uganda. Contact the team
-with your location so we can discuss the available delivery option.
-</p>
+    <div class="wrap">
 
-</details>
+      <div class="kicker">
+        MK Shoes Center
+      </div>
 
+      <h2>
+        Ready to<br>
+        find yours?
+      </h2>
 
-<details class="reveal">
+      <p>
+        Browse the catalogue or speak directly with
+        our team about the pair you're looking for.
+      </p>
 
-<summary>
-Do you offer installment purchases?
-</summary>
 
-<p>
-Yes. Installment purchases are available. Contact MK directly for the
-current arrangement and requirements.
-</p>
+      <div class="final-buttons">
 
-</details>
+        <a
+          href="shop.html"
+          class="final-button light"
+        >
+          Explore Shop →
+        </a>
 
+        <a
+          href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%20would%20like%20to%20find%20a%20pair%20of%20shoes."
+          class="final-button outline"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp MK
+        </a>
 
-<details class="reveal">
+      </div>
 
-<summary>
-How do I ask about a product?
-</summary>
+    </div>
 
-<p>
-The quickest option is WhatsApp. Send the product you're interested in
-or describe what you're looking for and the MK team can assist.
-</p>
+  </section>
 
-</details>
 
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
 
-<details class="reveal">
+  <footer>
 
-<summary>
-Do the products have prices on the website?
-</summary>
+    <div class="footer-grid">
 
-<p>
-Prices are intentionally not displayed in the catalogue. Contact the MK
-team for current availability and product details.
-</p>
 
-</details>
+      <div class="footer-brand">
 
-</section>
+        <h3>
+          MK <span>SHOES</span> CENTER
+        </h3>
 
+        <p>
+          Quality footwear, easy ordering and a shopping
+          experience built around you.
+        </p>
 
-<!-- CTA -->
+      </div>
 
-<section class="cta">
 
-<div class="cta-inner reveal">
+      <div class="footer-column">
 
-<small>One message away</small>
+        <h4>Explore</h4>
 
-<h2>
-Let's find your
-<em>next pair.</em>
-</h2>
+        <a href="index.html">Home</a>
 
-<p>
-Tell us what you're looking for and let MK help you discover the right option.
-</p>
+        <a href="shop.html">Shop</a>
 
-<a
-href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%27d%20like%20help%20finding%20a%20pair%20of%20shoes."
-target="_blank"
-class="btn">
-Chat with MK on WhatsApp →
-</a>
+        <a href="about.html">About</a>
 
-</div>
+        <a href="contact.html">Contact</a>
 
-</section>
+      </div>
 
-</main>
 
+      <div class="footer-column">
 
-<!-- FOOTER -->
+        <h4>Visit</h4>
 
-<footer>
+        <p>Kijura, Masindi</p>
 
-<div class="footer-inner">
+        <p>Near Kisalabwire Round About</p>
 
-<div class="footer-top">
+        <p>Near Round About Academy</p>
 
-<div class="footer-brand">
+        <p>9:00 AM – 9:00 PM</p>
 
-<h3>MK SHOES CENTER</h3>
+      </div>
 
-<p>
-Footwear for everyday life, personal style and every step in between —
-from Kijura, Masindi, Uganda.
-</p>
 
-</div>
+      <div class="footer-column">
 
+        <h4>Connect</h4>
 
-<div class="footer-column">
+        <p>Nationwide delivery</p>
 
-<h4>Explore</h4>
+        <p>Installment purchases</p>
 
-<a href="index.html">Home</a>
-<a href="shop.html">Shop</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+        <a
+          href="https://wa.me/256779818662"
+          target="_blank"
+          rel="noopener"
+        >
+          WhatsApp: 0779 818 662
+        </a>
 
-</div>
+      </div>
 
 
-<div class="footer-column">
+    </div>
 
-<h4>Services</h4>
 
-<a href="shop.html">Browse Shoes</a>
-<a href="#location">Find Store</a>
-<a href="contact.html">Delivery</a>
-<a href="contact.html">Installments</a>
+    <div class="footer-bottom">
 
-</div>
+      <div class="footer-credit">
 
+        <div>
+          © 2026 MK Shoes Center. All rights reserved.
+        </div>
 
-<div class="footer-column">
+        <div>
+          Built with love 🇺🇬 by Jon Tech
+        </div>
 
-<h4>Contact</h4>
+      </div>
 
-<a href="#location">
-Kijura, Masindi
-</a>
+      <div>
+        Kijura • Masindi • Uganda
+      </div>
 
-<a href="#location">
-9:00 AM — 9:00 PM
-</a>
+    </div>
 
-<a
-href="https://wa.me/256779818662"
-target="_blank">
-0779 818 662
-</a>
+  </footer>
 
-</div>
 
-</div>
+  <!-- =====================================================
+       FLOATING WHATSAPP
+       ===================================================== -->
 
+  <a
+    href="https://wa.me/256779818662"
+    class="floating-whatsapp"
+    target="_blank"
+    rel="noopener"
+  >
+    WhatsApp MK →
+  </a>
 
-<div class="footer-bottom">
 
-<span>
-© <span id="year"></span> MK Shoes Center. All rights reserved.
-</span>
+  <!-- =====================================================
+       WHATSAPP FORM SCRIPT
+       ===================================================== -->
 
-<span>
-Built with love (🇺🇬) by Jon Tech
-</span>
-
-</div>
-
-</div>
-
-</footer>
-
-
-<!-- FLOATING WHATSAPP -->
-
-<a
-href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%27d%20like%20to%20ask%20about%20your%20shoes."
-target="_blank"
-class="whatsapp"
-aria-label="WhatsApp MK Shoes Center">
-☎
-</a>
-
-
-<script>
-
-/* Mobile navigation */
-
-function toggleMenu(){
-
-  const menu =
-    document.getElementById("mobileMenu");
-
-  menu.style.display =
-    menu.style.display === "block"
-      ? "none"
-      : "block";
-
-}
-
-
-/* Close mobile menu */
-
-document
-.querySelectorAll("#mobileMenu a")
-.forEach(link => {
-
-  link.addEventListener("click", () => {
+  <script>
 
     document
-      .getElementById("mobileMenu")
-      .style.display = "none";
+      .getElementById("whatsappForm")
+      .addEventListener("submit", function(event){
 
-  });
+        event.preventDefault();
 
-});
+        const name =
+          document.getElementById("name").value.trim();
+
+        const phone =
+          document.getElementById("phone").value.trim();
+
+        const interest =
+          document.getElementById("interest").value;
+
+        const message =
+          document.getElementById("message").value.trim();
 
 
-/* Scroll reveal */
+        const text =
+          "Hello MK Shoes Center,%0A%0A" +
 
-const revealElements =
-  document.querySelectorAll(".reveal");
+          "My name is " +
+          encodeURIComponent(name) +
+          ".%0A" +
 
-const observer =
-  new IntersectionObserver(
-    entries => {
+          "Phone: " +
+          encodeURIComponent(phone || "Not provided") +
+          "%0A" +
 
-      entries.forEach(entry => {
+          "Enquiry: " +
+          encodeURIComponent(interest || "General enquiry") +
+          "%0A%0A" +
 
-        if(entry.isIntersecting){
+          encodeURIComponent(message);
 
-          entry.target
-            .classList
-            .add("visible");
 
-          observer
-            .unobserve(entry.target);
+        const whatsappURL =
+          "https://wa.me/256779818662?text=" + text;
 
-        }
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
 
       });
 
-    },
-    {
-      threshold:.12
-    }
-  );
+  </script>
 
-
-revealElements
-.forEach(element =>
-  observer.observe(element)
-);
-
-
-/* WhatsApp form */
-
-function sendWhatsApp(event){
-
-  event.preventDefault();
-
-  const name =
-    document.getElementById("name").value.trim();
-
-  const phone =
-    document.getElementById("phone").value.trim();
-
-  const interest =
-    document.getElementById("interest").value;
-
-  const message =
-    document.getElementById("message").value.trim();
-
-
-  const text =
-`Hello MK Shoes Center 👋
-
-My name is ${name}.
-${phone ? "My phone number is " + phone + "." : ""}
-
-I'm interested in: ${interest}
-
-Message:
-${message}
-
-Please help me with the available options. Thank you.`;
-
-
-  const url =
-    "https://wa.me/256779818662?text=" +
-    encodeURIComponent(text);
-
-  window.open(url, "_blank");
-
-}
-
-
-/* Current year */
-
-document.getElementById("year")
-.textContent = new Date().getFullYear();
-
-</script>
 
 </body>
 </html>
