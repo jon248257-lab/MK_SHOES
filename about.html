@@ -1,1 +1,1692 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Discover the story, vision and style behind MK Shoes Center — Kijura, Masindi, Uganda.">
+<title>About — MK Shoes Center</title><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@400;500;600;700&display=swap" rel="stylesheet"><style>
+:root{
+  --black:#0b0b0b;
+  --ink:#141414;
+  --cream:#f4f0e8;
+  --paper:#faf8f3;
+  --white:#fff;
+  --gold:#c7a15a;
+  --muted:#77736c;
+  --line:rgba(20,20,20,.14);
+  --darkline:rgba(255,255,255,.15);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
 
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  overflow-x:hidden;
+}
+
+img{
+  display:block;
+  width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font:inherit;
+}
+
+::selection{
+  background:var(--black);
+  color:var(--white);
+}
+
+/* =========================
+   PROMO BAR
+========================= */
+
+.promo{
+  height:38px;
+  background:var(--black);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.promo-track{
+  white-space:nowrap;
+  animation:marquee 22s linear infinite;
+}
+
+.promo-track span{
+  margin:0 45px;
+}
+
+@keyframes marquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(250,248,243,.94);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:82px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 4vw;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:3px;
+}
+
+.logo small{
+  display:block;
+  font-size:8px;
+  letter-spacing:3px;
+  font-weight:500;
+  margin-top:3px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:35px;
+}
+
+.nav-links a{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  position:relative;
+}
+
+.nav-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+  width:0;
+  height:1px;
+  background:var(--black);
+  transition:.4s var(--ease);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+  width:100%;
+}
+
+.nav-right{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:15px;
+}
+
+.nav-cta{
+  border:1px solid var(--black);
+  padding:12px 17px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  transition:.35s var(--ease);
+}
+
+.nav-cta:hover{
+  background:var(--black);
+  color:white;
+}
+
+.menu{
+  display:none;
+  width:42px;
+  height:42px;
+  border:1px solid var(--line);
+  background:transparent;
+  cursor:pointer;
+}
+
+.menu span{
+  display:block;
+  width:18px;
+  height:1px;
+  background:var(--black);
+  margin:4px auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:calc(100vh - 120px);
+  display:grid;
+  grid-template-columns:48% 52%;
+  background:var(--cream);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-copy{
+  padding:9vw 7vw 8vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  z-index:2;
+}
+
+.eyebrow{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(65px,8vw,135px);
+  font-weight:500;
+  line-height:.86;
+  letter-spacing:-6px;
+}
+
+.hero h1 em{
+  font-weight:400;
+}
+
+.hero-description{
+  max-width:430px;
+  margin-top:45px;
+  font-size:15px;
+  line-height:1.9;
+  color:#595650;
+}
+
+.hero-actions{
+  margin-top:38px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:50px;
+  padding:0 25px;
+  border:1px solid var(--black);
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1.7px;
+  transition:.4s var(--ease);
+}
+
+.btn.dark{
+  background:var(--black);
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+}
+
+.btn.light:hover{
+  background:var(--black);
+  color:white;
+}
+
+.hero-visual{
+  position:relative;
+  min-height:700px;
+  overflow:hidden;
+}
+
+.hero-visual img{
+  height:100%;
+  object-fit:cover;
+  filter:saturate(.85);
+  transition:transform 1.5s var(--ease);
+}
+
+.hero:hover .hero-visual img{
+  transform:scale(1.04);
+}
+
+.hero-label{
+  position:absolute;
+  right:30px;
+  bottom:30px;
+  background:white;
+  padding:18px 20px;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.hero-number{
+  position:absolute;
+  right:35px;
+  top:30px;
+  color:white;
+  font-family:var(--serif);
+  font-size:60px;
+  font-style:italic;
+  opacity:.8;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+  padding:150px 8vw;
+  background:var(--paper);
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:8vw;
+  align-items:start;
+}
+
+.section-index{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.intro h2{
+  font-family:var(--serif);
+  font-size:clamp(45px,5.5vw,85px);
+  line-height:1;
+  font-weight:500;
+  letter-spacing:-3px;
+}
+
+.intro h2 em{
+  font-style:italic;
+}
+
+.intro-text{
+  max-width:680px;
+}
+
+.intro-text p{
+  font-size:18px;
+  line-height:1.85;
+  color:#56534e;
+  margin-bottom:28px;
+}
+
+.intro-text p:first-child{
+  font-size:25px;
+  color:var(--ink);
+  line-height:1.5;
+}
+
+/* =========================
+   FULL IMAGE
+========================= */
+
+.full-image{
+  height:78vh;
+  min-height:550px;
+  position:relative;
+  overflow:hidden;
+}
+
+.full-image img{
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:scale(1.04);
+  transition:transform 1.8s var(--ease);
+}
+
+.full-image.visible img{
+  transform:scale(1);
+}
+
+.image-caption{
+  position:absolute;
+  left:5vw;
+  bottom:5vw;
+  color:white;
+  max-width:550px;
+}
+
+.image-caption span{
+  display:block;
+  font-size:9px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.image-caption h2{
+  font-family:var(--serif);
+  font-size:clamp(42px,6vw,90px);
+  font-weight:500;
+  line-height:.95;
+}
+
+/* =========================
+   MANIFESTO
+========================= */
+
+.manifesto{
+  background:var(--black);
+  color:white;
+  padding:150px 8vw;
+}
+
+.manifesto-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:100px;
+}
+
+.manifesto-label{
+  color:#aaa;
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.manifesto-mark{
+  width:55px;
+  height:55px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--serif);
+  font-style:italic;
+}
+
+.manifesto h2{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(50px,8vw,125px);
+  line-height:.94;
+  letter-spacing:-5px;
+  max-width:1100px;
+}
+
+.manifesto h2 em{
+  color:#d6c49b;
+}
+
+.manifesto-bottom{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10vw;
+  margin-top:100px;
+  padding-top:35px;
+  border-top:1px solid var(--darkline);
+}
+
+.manifesto-bottom p{
+  color:#aaa;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.manifesto-bottom strong{
+  color:white;
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story{
+  padding:150px 8vw;
+}
+
+.story-head{
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:8vw;
+  margin-bottom:100px;
+}
+
+.story-head h2{
+  font-family:var(--serif);
+  font-size:clamp(48px,6vw,90px);
+  line-height:.95;
+  font-weight:500;
+  letter-spacing:-3px;
+}
+
+.story-head p{
+  max-width:650px;
+  font-size:17px;
+  line-height:1.9;
+  color:#5f5b54;
+}
+
+.story-line{
+  position:relative;
+  max-width:1000px;
+  margin:auto;
+}
+
+.story-item{
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:60px;
+  padding:55px 0;
+  border-top:1px solid var(--line);
+}
+
+.story-year{
+  font-family:var(--serif);
+  font-size:35px;
+  font-style:italic;
+}
+
+.story-content h3{
+  font-size:24px;
+  margin-bottom:14px;
+}
+
+.story-content p{
+  max-width:650px;
+  color:#69655e;
+  line-height:1.8;
+  font-size:14px;
+}
+
+/* =========================
+   VALUES
+========================= */
+
+.values{
+  background:#e7e1d5;
+  padding:130px 8vw;
+}
+
+.values-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap:40px;
+  margin-bottom:75px;
+}
+
+.values-head h2{
+  font-family:var(--serif);
+  font-size:clamp(50px,6vw,90px);
+  font-weight:500;
+  line-height:.9;
+  letter-spacing:-4px;
+}
+
+.values-head p{
+  max-width:400px;
+  color:#66615a;
+  line-height:1.8;
+  font-size:14px;
+}
+
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(0,0,0,.16);
+}
+
+.value-card{
+  background:#e7e1d5;
+  min-height:320px;
+  padding:35px;
+  position:relative;
+  transition:.5s var(--ease);
+}
+
+.value-card:hover{
+  background:var(--black);
+  color:white;
+  transform:translateY(-8px);
+}
+
+.value-number{
+  font-family:var(--serif);
+  font-size:30px;
+  font-style:italic;
+}
+
+.value-card h3{
+  margin-top:95px;
+  font-size:20px;
+}
+
+.value-card p{
+  margin-top:15px;
+  font-size:13px;
+  line-height:1.7;
+  color:#6b675f;
+}
+
+.value-card:hover p{
+  color:#aaa;
+}
+
+/* =========================
+   COLLAGE
+========================= */
+
+.collage{
+  padding:150px 6vw;
+  background:var(--paper);
+}
+
+.collage-grid{
+  display:grid;
+  grid-template-columns:1.1fr .75fr 1fr;
+  grid-template-rows:250px 350px 220px;
+  gap:16px;
+}
+
+.collage-card{
+  overflow:hidden;
+  position:relative;
+}
+
+.collage-card img{
+  height:100%;
+  object-fit:cover;
+  transition:transform 1s var(--ease);
+}
+
+.collage-card:hover img{
+  transform:scale(1.07);
+}
+
+.collage-a{
+  grid-row:span 2;
+}
+
+.collage-b{
+  grid-row:span 1;
+}
+
+.collage-c{
+  grid-row:span 2;
+}
+
+.collage-d{
+  grid-column:2;
+}
+
+.collage-label{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  color:white;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  background:rgba(0,0,0,.5);
+  padding:10px 12px;
+  backdrop-filter:blur(5px);
+}
+
+/* =========================
+   AFRICA SECTION
+========================= */
+
+.africa{
+  background:var(--black);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:700px;
+}
+
+.africa-image{
+  min-height:650px;
+  overflow:hidden;
+}
+
+.africa-image img{
+  height:100%;
+  object-fit:cover;
+  filter:grayscale(.15);
+}
+
+.africa-copy{
+  padding:9vw 8vw;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.africa-copy .eyebrow{
+  color:#999;
+}
+
+.africa-copy h2{
+  font-family:var(--serif);
+  font-size:clamp(50px,6vw,92px);
+  line-height:.92;
+  font-weight:500;
+  letter-spacing:-4px;
+}
+
+.africa-copy h2 em{
+  color:#d5bc82;
+}
+
+.africa-copy p{
+  margin-top:35px;
+  max-width:520px;
+  color:#aaa;
+  font-size:15px;
+  line-height:1.9;
+}
+
+.africa-sign{
+  margin-top:45px;
+  font-family:var(--serif);
+  font-size:27px;
+  font-style:italic;
+}
+
+/* =========================
+   SERVICE NUMBERS
+========================= */
+
+.stats{
+  padding:120px 8vw;
+  background:var(--paper);
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.stat{
+  padding:65px 35px;
+  border-right:1px solid var(--line);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat-number{
+  font-family:var(--serif);
+  font-size:70px;
+  line-height:1;
+  font-style:italic;
+}
+
+.stat-label{
+  margin-top:15px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:10px;
+  color:var(--muted);
+}
+
+.stat-description{
+  margin-top:20px;
+  color:#69655e;
+  font-size:13px;
+  line-height:1.7;
+  max-width:280px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.final-cta{
+  margin:0 4vw 4vw;
+  min-height:620px;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.18)),
+    url("https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=2200&q=85")
+    center/cover;
+  color:white;
+  display:flex;
+  align-items:flex-end;
+  padding:6vw;
+  position:relative;
+  overflow:hidden;
+}
+
+.cta-circle{
+  position:absolute;
+  right:7%;
+  top:10%;
+  width:150px;
+  height:150px;
+  border:1px solid rgba(255,255,255,.5);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.cta-copy{
+  max-width:750px;
+}
+
+.cta-copy .eyebrow{
+  color:#ccc;
+}
+
+.cta-copy h2{
+  font-family:var(--serif);
+  font-size:clamp(55px,7vw,105px);
+  line-height:.9;
+  font-weight:500;
+  letter-spacing:-4px;
+}
+
+.cta-copy p{
+  margin:30px 0;
+  max-width:520px;
+  color:#ddd;
+  line-height:1.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:var(--black);
+  color:white;
+  padding:80px 5vw 35px;
+}
+
+.footer-top{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1.2fr;
+  gap:60px;
+  padding-bottom:70px;
+  border-bottom:1px solid var(--darkline);
+}
+
+.footer-brand{
+  max-width:360px;
+}
+
+.footer-brand h2{
+  font-size:25px;
+  letter-spacing:4px;
+}
+
+.footer-brand p{
+  color:#999;
+  line-height:1.8;
+  font-size:13px;
+  margin-top:20px;
+}
+
+.footer-col h4{
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#777;
+  margin-bottom:22px;
+}
+
+.footer-col a,
+.footer-col p{
+  display:block;
+  font-size:13px;
+  color:#bbb;
+  line-height:2.1;
+}
+
+.footer-col a:hover{
+  color:white;
+}
+
+.footer-bottom{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  padding-top:30px;
+  color:#777;
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:900;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:#111;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  transition:.35s var(--ease);
+  font-size:10px;
+  letter-spacing:1px;
+}
+
+.whatsapp:hover{
+  transform:translateY(-6px) scale(1.04);
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .9s var(--ease),transform .9s var(--ease);
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+  .nav{
+    grid-template-columns:1fr auto;
+    min-height:70px;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:70px;
+    left:0;
+    right:0;
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    padding:25px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:22px;
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .nav-right{
+    display:flex;
+  }
+
+  .nav-cta{
+    display:none;
+  }
+
+  .menu{
+    display:block;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-copy{
+    padding:80px 7vw;
+  }
+
+  .hero-visual{
+    min-height:65vh;
+  }
+
+  .intro-grid,
+  .story-head{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .manifesto-bottom{
+    grid-template-columns:1fr;
+    gap:35px;
+  }
+
+  .value-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .collage{
+    padding:90px 5vw;
+  }
+
+  .collage-grid{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:260px 260px 260px;
+  }
+
+  .collage-a,
+  .collage-c{
+    grid-row:span 1;
+  }
+
+  .collage-d{
+    grid-column:auto;
+  }
+
+  .africa{
+    grid-template-columns:1fr;
+  }
+
+  .africa-image{
+    min-height:500px;
+  }
+
+  .stats-grid{
+    grid-template-columns:1fr;
+  }
+
+  .stat{
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .stat:last-child{
+    border-bottom:0;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+  }
+}
+
+@media(max-width:560px){
+
+  .promo{
+    height:34px;
+    font-size:9px;
+  }
+
+  .logo{
+    font-size:15px;
+  }
+
+  .hero h1{
+    letter-spacing:-3px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .intro,
+  .story,
+  .manifesto,
+  .values,
+  .stats{
+    padding-top:90px;
+    padding-bottom:90px;
+  }
+
+  .intro h2,
+  .story-head h2,
+  .values-head h2,
+  .africa-copy h2{
+    letter-spacing:-2px;
+  }
+
+  .manifesto h2{
+    letter-spacing:-3px;
+  }
+
+  .story-item{
+    grid-template-columns:65px 1fr;
+    gap:20px;
+  }
+
+  .story-year{
+    font-size:23px;
+  }
+
+  .story-content h3{
+    font-size:19px;
+  }
+
+  .value-grid{
+    grid-template-columns:1fr;
+  }
+
+  .value-card{
+    min-height:260px;
+  }
+
+  .value-card h3{
+    margin-top:65px;
+  }
+
+  .collage-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:300px 250px 300px 250px;
+  }
+
+  .collage-a,
+  .collage-b,
+  .collage-c,
+  .collage-d{
+    grid-column:auto;
+    grid-row:auto;
+  }
+
+  .full-image{
+    min-height:500px;
+    height:65vh;
+  }
+
+  .final-cta{
+    min-height:580px;
+    margin:0 0 0;
+    padding:12vw 7vw;
+  }
+
+  .cta-circle{
+    width:90px;
+    height:90px;
+    right:6%;
+    top:7%;
+    font-size:7px;
+  }
+
+  .footer-top{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .footer-bottom{
+    line-height:1.8;
+  }
+
+  .whatsapp{
+    width:54px;
+    height:54px;
+    right:16px;
+    bottom:16px;
+  }
+}
+</style></head><body><!-- =========================
+     PROMOTION
+========================= --><div class="promo">
+  <div class="promo-track">
+    <span>MK SHOES CENTER</span>
+    <span>20% OFF SELECTED STYLES</span>
+    <span>Kijura · Masindi · Uganda</span>
+    <span>Nationwide Delivery</span>
+    <span>Installment Purchases Available</span>
+    <span>MK SHOES CENTER</span>
+    <span>20% OFF SELECTED STYLES</span>
+    <span>Kijura · Masindi · Uganda</span>
+  </div>
+</div><!-- =========================
+     HEADER
+========================= --><header>
+  <nav class="nav"><a href="index.html" class="logo">
+  MK SHOES
+  <small>CENTER · UGANDA</small>
+</a>
+
+<div class="nav-links" id="navLinks">
+  <a href="index.html">Home</a>
+  <a href="shop-2-2.html">Shop</a>
+  <a href="about.html" class="active">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="nav-right">
+  <a class="nav-cta" href="shop-2-2.html">Explore Collection</a>
+
+  <button class="menu" id="menuBtn" aria-label="Open navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
+  </nav>
+</header><main><!-- =========================
+     HERO
+========================= --><section class="hero">  <div class="hero-copy reveal"><div class="eyebrow">The story behind the step</div>
+
+<h1>
+  More than<br>
+  <em>shoes.</em>
+</h1>
+
+<p class="hero-description">
+  MK Shoes Center is a footwear destination built around movement,
+  personal style and the belief that the right pair of shoes can
+  change the way you enter a room — and the way you move through life.
+</p>
+
+<div class="hero-actions">
+  <a href="shop-2-2.html" class="btn dark">Explore MK</a>
+  <a href="#story" class="btn light">Our Story</a>
+</div>
+
+  </div>  <div class="hero-visual">
+    <img
+      src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=1600&q=85"
+      alt="Stylish footwear">
+    <div class="hero-number">01</div>
+    <div class="hero-label">Kijura · Masindi · Uganda</div>
+  </div></section><!-- =========================
+     INTRO
+========================= --><section class="intro">  <div class="intro-grid"><div class="section-index reveal">
+  01 / The beginning
+</div>
+
+<div class="intro-text reveal">
+
+  <h2>
+    A local idea<br>
+    with a <em>bigger</em><br>
+    step.
+  </h2>
+
+  <br><br>
+
+  <p>
+    MK Shoes Center exists for people who understand that footwear
+    is not simply something you put on your feet.
+  </p>
+
+  <p>
+    It is part of how you present yourself, how you move, how you
+    work, how you celebrate and how you express your personality.
+    From everyday essentials to statement styles, we curate footwear
+    for real people with different lifestyles and different stories.
+  </p>
+
+  <p>
+    Our home is Kijura, Masindi — but our ambition has never been
+    limited by a single street, town or district. We are building
+    a footwear experience that feels local at heart and confidently
+    connected to the wider world.
+  </p>
+
+</div>
+
+  </div></section><!-- =========================
+     CINEMATIC IMAGE
+========================= --><section class="full-image reveal"><img
+src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=2200&q=88"
+alt="Red sneaker editorial photograph">
+
+  <div class="image-caption">
+    <span>MK Visual Language / 01</span>
+    <h2>Wear your<br>next move.</h2>
+  </div></section><!-- =========================
+     MANIFESTO
+========================= --><section class="manifesto">  <div class="manifesto-top">
+    <div class="manifesto-label">Our manifesto</div>
+    <div class="manifesto-mark">MK</div>
+  </div>  <h2 class="reveal">
+    We don't believe<br>
+    in <em>ordinary</em> steps.
+  </h2>  <div class="manifesto-bottom"><p>
+  <strong>01 — PERSONALITY</strong><br><br>
+  Your shoes should feel like you. That's why our catalogue is
+  designed around variety rather than one definition of style.
+</p>
+
+<p>
+  <strong>02 — ACCESS</strong><br><br>
+  Great style should feel closer. We make it easier for customers
+  across Uganda to discover footwear, ask questions and order
+  directly through our team.
+</p>
+
+  </div></section><!-- =========================
+     STORY / TIMELINE
+========================= --><section class="story" id="story">  <div class="story-head"><div class="section-index reveal">
+  02 / Our journey
+</div>
+
+<div class="reveal">
+  <h2>
+    From a shop<br>
+    to a <em>movement.</em>
+  </h2>
+
+  <br>
+
+  <p>
+    Every business has a beginning. Ours is rooted in the simple
+    idea that customers deserve more choice, better presentation
+    and a footwear experience that feels personal.
+  </p>
+</div>
+
+  </div>  <div class="story-line"><div class="story-item reveal">
+  <div class="story-year">01</div>
+  <div class="story-content">
+    <h3>The idea</h3>
+    <p>
+      Start with footwear people actually want to wear — and make
+      discovering it feel exciting.
+    </p>
+  </div>
+</div>
+
+<div class="story-item reveal">
+  <div class="story-year">02</div>
+  <div class="story-content">
+    <h3>Kijura</h3>
+    <p>
+      Our physical identity is connected to Kijura, Masindi,
+      near Kisalabwire and Round About Academy.
+    </p>
+  </div>
+</div>
+
+<div class="story-item reveal">
+  <div class="story-year">03</div>
+  <div class="story-content">
+    <h3>The catalogue</h3>
+    <p>
+      We continue expanding the range across sneakers, casual
+      footwear, formal styles, ladies' footwear, sandals and
+      everyday essentials.
+    </p>
+  </div>
+</div>
+
+<div class="story-item reveal">
+  <div class="story-year">04</div>
+  <div class="story-content">
+    <h3>Beyond Masindi</h3>
+    <p>
+      With nationwide delivery, our customers can connect with
+      MK Shoes Center from different parts of Uganda.
+    </p>
+  </div>
+</div>
+
+<div class="story-item reveal">
+  <div class="story-year">05</div>
+  <div class="story-content">
+    <h3>What's next</h3>
+    <p>
+      A bigger catalogue, stronger digital experiences and an
+      MK Shoes Center that continues to evolve with its customers.
+    </p>
+  </div>
+</div>
+
+  </div></section><!-- =========================
+     VALUES
+========================= --><section class="values">  <div class="values-head"><h2 class="reveal">
+  What we<br>
+  stand <em>for.</em>
+</h2>
+
+<p class="reveal">
+  Our identity is not built only around products. It is built
+  around how customers feel before, during and after they choose
+  their next pair.
+</p>
+
+  </div>  <div class="value-grid"><article class="value-card reveal">
+  <div class="value-number">01</div>
+  <h3>Style</h3>
+  <p>
+    A constantly evolving selection designed for different
+    personalities, occasions and lifestyles.
+  </p>
+</article>
+
+<article class="value-card reveal">
+  <div class="value-number">02</div>
+  <h3>Choice</h3>
+  <p>
+    We know one customer may want a sneaker while another needs
+    a formal shoe. Variety matters.
+  </p>
+</article>
+
+<article class="value-card reveal">
+  <div class="value-number">03</div>
+  <h3>Service</h3>
+  <p>
+    Questions, recommendations, orders and availability are
+    handled through a direct customer-first approach.
+  </p>
+</article>
+
+<article class="value-card reveal">
+  <div class="value-number">04</div>
+  <h3>Movement</h3>
+  <p>
+    From Kijura to destinations across Uganda, we believe
+    footwear should keep people moving.
+  </p>
+</article>
+
+  </div></section><!-- =========================
+     IMAGE COLLAGE
+========================= --><section class="collage">  <div class="collage-grid"><div class="collage-card collage-a reveal">
+  <img
+    src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=1200&q=85"
+    alt="Sneaker">
+  <div class="collage-label">Everyday energy</div>
+</div>
+
+<div class="collage-card collage-b reveal">
+  <img
+    src="https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=1000&q=85"
+    alt="Sneaker collection">
+  <div class="collage-label">Street / 02</div>
+</div>
+
+<div class="collage-card collage-c reveal">
+  <img
+    src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=1200&q=85"
+    alt="Fashion footwear">
+  <div class="collage-label">Own the moment</div>
+</div>
+
+<div class="collage-card collage-d reveal">
+  <img
+    src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=1000&q=85"
+    alt="Footwear">
+  <div class="collage-label">Made to move</div>
+</div>
+
+  </div></section><!-- =========================
+     AFRICAN IDENTITY
+========================= --><section class="africa">  <div class="africa-image">
+    <img
+      src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=1500&q=85"
+      alt="African city street">
+  </div>  <div class="africa-copy"><div class="eyebrow">Rooted here. Looking everywhere.</div>
+
+<h2>
+  Made for<br>
+  <em>Uganda.</em><br>
+  Ready for<br>
+  everywhere.
+</h2>
+
+<p>
+  We are proud to build MK Shoes Center from Uganda.
+  Our visual language may feel global, but our foundation is
+  deeply connected to the people, streets and everyday movement
+  around us.
+</p>
+
+<p>
+  From the customer walking into our shop to someone ordering
+  from another part of the country, the goal remains the same:
+  make the experience memorable.
+</p>
+
+<div class="africa-sign">
+  Kijura → Uganda → Beyond
+</div>
+
+  </div></section><!-- =========================
+     STATS
+========================= --><section class="stats">  <div class="stats-grid"><div class="stat reveal">
+  <div class="stat-number">01</div>
+  <div class="stat-label">Home</div>
+  <p class="stat-description">
+    Kijura, Masindi — near Kisalabwire and Round About Academy.
+  </p>
+</div>
+
+<div class="stat reveal">
+  <div class="stat-number">09–21</div>
+  <div class="stat-label">Open daily</div>
+  <p class="stat-description">
+    Monday to Sunday, 9:00 AM to 9:00 PM.
+  </p>
+</div>
+
+<div class="stat reveal">
+  <div class="stat-number">20%</div>
+  <div class="stat-label">Current promotion</div>
+  <p class="stat-description">
+    Selected styles can be part of our current promotional offers.
+  </p>
+</div>
+
+  </div></section><!-- =========================
+     FINAL CTA
+========================= --><section class="final-cta reveal">  <div class="cta-circle">
+    Step into<br>MK
+  </div>  <div class="cta-copy"><div class="eyebrow">Your next pair is waiting</div>
+
+<h2>
+  Find the pair<br>
+  that feels like <em>you.</em>
+</h2>
+
+<p>
+  Explore the catalogue or speak directly with the MK team.
+  If you don't see what you're looking for, ask us — our catalogue
+  is only part of the story.
+</p>
+
+<a href="shop-2-2.html" class="btn" style="background:white;color:#111;border-color:white;">
+  Explore the Collection
+</a>
+
+  </div></section></main><!-- =========================
+     FOOTER
+========================= --><footer>  <div class="footer-top"><div class="footer-brand">
+
+  <h2>MK SHOES CENTER</h2>
+
+  <p>
+    Footwear, style and movement from Kijura, Masindi, Uganda.
+    Nationwide deliveries available.
+  </p>
+
+</div>
+
+<div class="footer-col">
+
+  <h4>Navigate</h4>
+
+  <a href="index.html">Home</a>
+  <a href="shop-2-2.html">Shop</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+
+</div>
+
+<div class="footer-col">
+
+  <h4>Visit</h4>
+
+  <p>Kijura, Masindi</p>
+  <p>Near Kisalabwire</p>
+  <p>Round About Academy</p>
+  <p>Uganda</p>
+
+</div>
+
+<div class="footer-col">
+
+  <h4>Contact</h4>
+
+  <a href="https://wa.me/256779818662">
+    WhatsApp: 0779818662
+  </a>
+
+  <p>9:00 AM — 9:00 PM</p>
+  <p>Monday — Sunday</p>
+  <p>Nationwide delivery</p>
+
+</div>
+
+  </div>  <div class="footer-bottom"><span>
+  © 2026 MK Shoes Center. All rights reserved.
+</span>
+
+<span>
+  Built with love (🇺🇬) by Jon Tech
+</span>
+
+  </div></footer><!-- =========================
+     FLOATING WHATSAPP
+========================= --><a
+href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%20would%20like%20to%20know%20more%20about%20your%20shoes."
+class="whatsapp"
+aria-label="Chat with MK Shoes Center on WhatsApp">
+WA
+</a>
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+});
+
+/* Close mobile menu after clicking */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+  });
+});
+
+/* =========================
+   SCROLL REVEALS
+========================= */
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold:.12
+  }
+);
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+
+/* =========================
+   IMAGE PARALLAX
+========================= */
+
+window.addEventListener("scroll", () => {
+
+  const images = document.querySelectorAll(".full-image img");
+
+  images.forEach(img => {
+
+    const section = img.closest(".full-image");
+
+    if(!section) return;
+
+    const rect = section.getBoundingClientRect();
+
+    if(rect.top < window.innerHeight && rect.bottom > 0){
+
+      const progress =
+        (window.innerHeight - rect.top) /
+        (window.innerHeight + rect.height);
+
+      img.style.transform =
+        "scale(1.03) translateY(" +
+        ((progress - .5) * 20) +
+        "px)";
+
+    }
+
+  });
+
+});
+
+</script></body>
+</html>
