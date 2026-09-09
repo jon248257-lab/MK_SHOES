@@ -16,15 +16,9 @@
   --shadow:0 22px 60px rgba(0,0,0,.09);
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   font-family:"DM Sans",sans-serif;
@@ -34,24 +28,12 @@ body{
   overflow-x:hidden;
 }
 
-img{
-  display:block;
-  width:100%;
-}
+img{display:block;width:100%}
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
+a{color:inherit;text-decoration:none}
 
-button,
-input,
-select,
-textarea{
-  font:inherit;
-}
+button,input,select,textarea{font:inherit}
 
-/* TOP STRIP */
 .top-strip{
   background:#111;
   color:#fff;
@@ -65,15 +47,9 @@ textarea{
   text-transform:uppercase;
 }
 
-.top-strip span{
-  opacity:.8;
-}
+.top-strip span{opacity:.8}
+.top-strip strong{color:#e1b86d}
 
-.top-strip strong{
-  color:#e1b86d;
-}
-
-/* NAV */
 header{
   position:sticky;
   top:0;
@@ -138,9 +114,7 @@ header{
   width:100%;
 }
 
-.nav-links a.active{
-  color:#000;
-}
+.nav-links a.active{color:#000}
 
 .nav-whatsapp{
   background:#111;
@@ -266,9 +240,7 @@ header{
   background:rgba(255,255,255,.45);
 }
 
-.btn-light:hover{
-  background:#fff;
-}
+.btn-light:hover{background:#fff}
 
 .hero-image{
   min-height:650px;
@@ -308,9 +280,7 @@ header{
   margin-bottom:5px;
 }
 
-.hero-tag strong{
-  font-size:.9rem;
-}
+.hero-tag strong{font-size:.9rem}
 
 /* QUICK CONTACT */
 .quick{
@@ -332,9 +302,7 @@ header{
   align-items:flex-start;
 }
 
-.quick-card:last-child{
-  border-right:0;
-}
+.quick-card:last-child{border-right:0}
 
 .quick-icon{
   width:43px;
@@ -357,9 +325,7 @@ header{
   margin-bottom:4px;
 }
 
-.quick-card strong{
-  font-size:.95rem;
-}
+.quick-card strong{font-size:.95rem}
 
 /* INTRO */
 .section{
@@ -397,9 +363,7 @@ header{
   max-width:680px;
 }
 
-.intro-text p + p{
-  margin-top:17px;
-}
+.intro-text p+p{margin-top:17px}
 
 /* CONTACT DESK */
 .contact-desk{
@@ -415,13 +379,9 @@ header{
   align-items:stretch;
 }
 
-.desk-copy{
-  padding:20px 0;
-}
+.desk-copy{padding:20px 0}
 
-.desk-copy .section-label{
-  color:#d5a85c;
-}
+.desk-copy .section-label{color:#d5a85c}
 
 .desk-copy h2{
   font-family:"Playfair Display",serif;
@@ -431,7 +391,7 @@ header{
   max-width:650px;
 }
 
-.desk-copy > p{
+.desk-copy>p{
   margin-top:25px;
   color:#b8b8b4;
   max-width:570px;
@@ -480,9 +440,7 @@ header{
   margin-bottom:28px;
 }
 
-.field{
-  margin-bottom:16px;
-}
+.field{margin-bottom:16px}
 
 .field label{
   display:block;
@@ -529,14 +487,10 @@ header{
   transition:.25s;
 }
 
-.submit:hover{
-  background:#16854b;
-}
+.submit:hover{background:#16854b}
 
 /* ANSWERS */
-.answers{
-  padding:120px 0;
-}
+.answers{padding:120px 0}
 
 .answers-heading{
   display:flex;
@@ -574,9 +528,7 @@ header{
   padding-right:40px;
 }
 
-.faq:nth-child(even){
-  padding-left:40px;
-}
+.faq:nth-child(even){padding-left:40px}
 
 .faq-number{
   color:#a17a3d;
@@ -597,9 +549,7 @@ header{
 }
 
 /* INFO BOARD */
-.info-board{
-  padding-bottom:120px;
-}
+.info-board{padding-bottom:120px}
 
 .board{
   display:grid;
@@ -645,18 +595,12 @@ header{
   font-size:.9rem;
 }
 
-.board-item span:first-child{
-  color:#74736d;
-}
+.board-item span:first-child{color:#74736d}
 
-.board-item strong{
-  text-align:right;
-}
+.board-item strong{text-align:right}
 
 /* MAP */
-.location{
-  padding:0 0 120px;
-}
+.location{padding:0 0 120px}
 
 .location-head{
   display:flex;
@@ -806,9 +750,7 @@ footer{
   margin-bottom:8px;
 }
 
-.footer-column a:hover{
-  color:#fff;
-}
+.footer-column a:hover{color:#fff}
 
 .footer-bottom{
   max-width:1400px;
@@ -823,9 +765,7 @@ footer{
   font-size:.76rem;
 }
 
-.footer-bottom strong{
-  color:#aaa;
-}
+.footer-bottom strong{color:#aaa}
 
 /* FLOATING */
 .float-wa{
@@ -873,35 +813,25 @@ footer{
 /* RESPONSIVE */
 @media(max-width:950px){
 
-  .nav{
-    width:94%;
-  }
+  .nav{width:94%}
 
   .nav-links{
     gap:16px;
     font-size:.76rem;
   }
 
-  .nav-whatsapp{
-    display:none;
-  }
+  .nav-whatsapp{display:none}
 
-  .contact-hero{
-    grid-template-columns:1fr;
-  }
+  .contact-hero{grid-template-columns:1fr}
 
   .hero-copy{
     min-height:560px;
     padding:75px 7%;
   }
 
-  .hero-image{
-    min-height:460px;
-  }
+  .hero-image{min-height:460px}
 
-  .quick{
-    margin:-35px auto 0;
-  }
+  .quick{margin:-35px auto 0}
 
   .intro{
     grid-template-columns:1fr;
@@ -914,34 +844,22 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .desk-copy{
-    padding:0;
-  }
+  .desk-copy{padding:0}
 
-  .board-image{
-    min-height:430px;
-  }
+  .board-image{min-height:430px}
 
-  .board-content{
-    padding:55px 7%;
-  }
+  .board-content{padding:55px 7%}
 
-  .faq-grid{
-    grid-template-columns:1fr;
-  }
+  .faq-grid{grid-template-columns:1fr}
 
   .faq:nth-child(odd){
     border-right:0;
     padding-right:0;
   }
 
-  .faq:nth-child(even){
-    padding-left:0;
-  }
+  .faq:nth-child(even){padding-left:0}
 
-  .footer-top{
-    grid-template-columns:1fr 1fr;
-  }
+  .footer-top{grid-template-columns:1fr 1fr}
 }
 
 @media(max-width:700px){
@@ -952,46 +870,28 @@ footer{
     text-align:center;
   }
 
-  .top-strip span:nth-child(2){
-    display:none;
-  }
+  .top-strip span:nth-child(2){display:none}
 
-  .nav{
-    min-height:70px;
-  }
+  .nav{min-height:70px}
 
-  .logo{
-    font-size:1rem;
-  }
+  .logo{font-size:1rem}
 
   .nav-links{
     gap:11px;
     font-size:.67rem;
   }
 
-  .nav-links a{
-    padding:24px 0;
-  }
+  .nav-links a{padding:24px 0}
 
-  .nav-links a::after{
-    bottom:17px;
-  }
+  .nav-links a::after{bottom:17px}
 
-  .hero-copy{
-    min-height:520px;
-  }
+  .hero-copy{min-height:520px}
 
-  .hero-copy h1{
-    font-size:4.1rem;
-  }
+  .hero-copy h1{font-size:4.1rem}
 
-  .hero-copy p{
-    font-size:.94rem;
-  }
+  .hero-copy p{font-size:.94rem}
 
-  .hero-image{
-    min-height:390px;
-  }
+  .hero-image{min-height:390px}
 
   .quick{
     width:92%;
@@ -1004,62 +904,36 @@ footer{
     padding:22px;
   }
 
-  .quick-card:last-child{
-    border-bottom:0;
-  }
+  .quick-card:last-child{border-bottom:0}
 
-  .intro{
-    padding:80px 0 65px;
-  }
+  .intro{padding:80px 0 65px}
 
-  .contact-desk{
-    padding:75px 0;
-  }
+  .contact-desk{padding:75px 0}
 
-  .desk-form{
-    padding:25px;
-  }
+  .desk-form{padding:25px}
 
-  .answers{
-    padding:80px 0;
-  }
+  .answers{padding:80px 0}
 
   .answers-heading{
     display:block;
     margin-bottom:35px;
   }
 
-  .answers-heading p{
-    margin-top:18px;
-  }
+  .answers-heading p{margin-top:18px}
 
-  .info-board{
-    padding-bottom:80px;
-  }
+  .info-board{padding-bottom:80px}
 
-  .board-content h2{
-    font-size:2.8rem;
-  }
+  .board-content h2{font-size:2.8rem}
 
-  .location{
-    padding-bottom:80px;
-  }
+  .location{padding-bottom:80px}
 
-  .location-head{
-    display:block;
-  }
+  .location-head{display:block}
 
-  .location-head p{
-    margin-top:18px;
-  }
+  .location-head p{margin-top:18px}
 
-  .map-wrap{
-    height:380px;
-  }
+  .map-wrap{height:380px}
 
-  .map-actions{
-    display:block;
-  }
+  .map-actions{display:block}
 
   .map-btn{
     display:inline-block;
@@ -1071,13 +945,9 @@ footer{
     gap:35px;
   }
 
-  .footer-bottom{
-    display:block;
-  }
+  .footer-bottom{display:block}
 
-  .footer-bottom div + div{
-    margin-top:8px;
-  }
+  .footer-bottom div+div{margin-top:8px}
 
   .promo{
     left:12px;
@@ -1089,12 +959,12 @@ footer{
     bottom:15px;
   }
 }
-</style></head><body><!-- TOP NOTICE --><div class="top-strip">
+</style></head><body><div class="top-strip">
   <strong>20% OFF</strong>
   <span>Selected footwear promotion</span>
   <span>Nationwide delivery across Uganda</span>
   <span>Installment purchases available</span>
-</div><!-- NAVIGATION --><header>
+</div><header>
   <nav class="nav"><a href="index.html" class="logo">
   MK SHOES
   <span>CENTER · KIJURA</span>
@@ -1115,7 +985,7 @@ footer{
 </a>
 
   </nav>
-</header><!-- HERO --><section class="contact-hero">  <div class="hero-copy"><div class="eyebrow">MK Shoes Center · Contact</div>
+</header><section class="contact-hero">  <div class="hero-copy"><div class="eyebrow">MK Shoes Center · Contact</div>
 
 <h1>
   Let's make<br>
@@ -1129,6 +999,7 @@ footer{
 </p>
 
 <div class="hero-buttons">
+
   <a
     class="btn btn-dark"
     href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center%2C%20I%27d%20like%20help%20finding%20a%20pair."
@@ -1139,11 +1010,12 @@ footer{
   <a class="btn btn-light" href="#location">
     Find our location
   </a>
+
 </div>
 
-  </div>  <div class="hero-image"><!-- Different image from the homepage -->
+  </div>  <div class="hero-image"><!-- FIXED: stable replacement image -->
 <img
-  src="https://images.unsplash.com/photo-1652262050944-1d6c5fbe8e9f?auto=format&fit=crop&w=1800&q=85"
+  src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=1800&q=85"
   alt="Shoes displayed in a footwear setting"
   loading="eager">
 
@@ -1152,7 +1024,7 @@ footer{
   <strong>Kijura, Masindi<br>Uganda</strong>
 </div>
 
-  </div></section><!-- QUICK CONTACT --><section class="quick">  <div class="quick-card">
+  </div></section><section class="quick">  <div class="quick-card">
     <div class="quick-icon">⌁</div>
     <div>
       <small>WhatsApp</small>
@@ -1170,8 +1042,9 @@ footer{
       <small>Open</small>
       <strong>Every day · 9AM–9PM</strong>
     </div>
-  </div></section><!-- INTRO --><section class="section intro">  <div>
-    <div class="section-label">A direct line to MK</div><h2>
+  </div></section><section class="section intro">  <div><div class="section-label">A direct line to MK</div>
+
+<h2>
   No complicated<br>
   customer service.
 </h2>
@@ -1194,7 +1067,7 @@ footer{
   every product available through MK Shoes Center.
 </p>
 
-  </div></section><!-- WHATSAPP DESK --><section class="contact-desk">  <div class="section desk-grid"><div class="desk-copy">
+  </div></section><section class="contact-desk">  <div class="section desk-grid"><div class="desk-copy">
 
   <div class="section-label">The MK WhatsApp desk</div>
 
@@ -1237,7 +1110,6 @@ footer{
 </div>
 
 
-<!-- ENQUIRY FORM -->
 <div class="desk-form">
 
   <h3>Send an enquiry</h3>
@@ -1267,9 +1139,11 @@ footer{
     </div>
 
     <div class="field">
+
       <label for="enquiry">What do you need?</label>
 
       <select id="enquiry" required>
+
         <option value="">Choose an enquiry</option>
         <option>Find a particular shoe</option>
         <option>Product availability</option>
@@ -1278,11 +1152,13 @@ footer{
         <option>Installment purchase</option>
         <option>20% promotion</option>
         <option>Other enquiry</option>
+
       </select>
 
     </div>
 
     <div class="field">
+
       <label for="message">Message</label>
 
       <textarea
@@ -1300,13 +1176,15 @@ footer{
 
 </div>
 
-  </div></section><!-- QUESTIONS / ANSWERS --><section class="section answers">  <div class="answers-heading"><div>
+  </div></section><section class="section answers">  <div class="answers-heading"><div>
+
   <div class="section-label">Before you message us</div>
 
   <h2>
     Questions?<br>
     Start here.
   </h2>
+
 </div>
 
 <p>
@@ -1392,9 +1270,8 @@ footer{
   </p>
 </article>
 
-  </div></section><!-- INFORMATION BOARD --><section class="section info-board">  <div class="board"><div class="board-image">
+  </div></section><section class="section info-board">  <div class="board"><div class="board-image">
 
-  <!-- New image, not used on homepage -->
   <img
     src="https://images.unsplash.com/photo-1603487742131-4160ec999306?auto=format&fit=crop&w=1500&q=85"
     alt="Shoes arranged for display"
@@ -1457,13 +1334,15 @@ footer{
 
 </div>
 
-  </div></section><!-- LOCATION --><section class="section location" id="location">  <div class="location-head"><div>
+  </div></section><section class="section location" id="location">  <div class="location-head"><div>
+
   <div class="section-label">Come and see us</div>
 
   <h2>
     Find MK<br>
     in Kijura.
   </h2>
+
 </div>
 
 <p>
@@ -1489,7 +1368,7 @@ footer{
   Open Google Maps ↗
 </a>
 
-  </div></section><!-- FINAL CTA --><section class="final-cta">  <div class="section-label">One message away</div>  <h2>
+  </div></section><section class="final-cta">  <div class="section-label">One message away</div>  <h2>
     Your next pair<br>
     could start here.
   </h2>  <p>
@@ -1502,7 +1381,7 @@ target="_blank">
 Start a WhatsApp conversation →
 </a>
 
-</section><!-- FOOTER --><footer>  <div class="footer-top"><div class="footer-brand">
+</section><footer>  <div class="footer-top"><div class="footer-brand">
 
   <h3>MK SHOES CENTER</h3>
 
@@ -1512,7 +1391,6 @@ Start a WhatsApp conversation →
   </p>
 
 </div>
-
 
 <div class="footer-column">
 
@@ -1524,7 +1402,6 @@ Start a WhatsApp conversation →
   <a href="contact.html">Contact</a>
 
 </div>
-
 
 <div class="footer-column">
 
@@ -1548,7 +1425,7 @@ Start a WhatsApp conversation →
   Built with love 🇺🇬 by <strong>Jon Tech</strong>
 </div>
 
-  </div></footer><!-- FLOATING WHATSAPP --><a
+  </div></footer><a
 class="float-wa"
 href="https://wa.me/256779818662?text=Hello%20MK%20Shoes%20Center!"
 target="_blank"
@@ -1556,7 +1433,7 @@ aria-label="Chat with MK Shoes Center on WhatsApp">
 ☎
 </a>
 
-<!-- PROMOTION --><div class="promo">
+<div class="promo">
   <b>20%</b>
   <span>promotion available</span>
 </div><script>
